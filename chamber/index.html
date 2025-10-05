@@ -1,1 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="course home page ">
+    <meta name="author" content="Tawariowei Oyinpreye">
+    <meta property="og:title" content="Chamber of Commerce home page">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="world.ico">
+    <meta property="og:url" content="https://example.com/directory.html">
+    <link rel="stylesheet" href="styles/index-style.css">
+    <script src="scripts/weather.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/slides.js" defer></script>
+    <script src="scripts/members.js" defer></script>
+    <title>Nigeria Chamber page</title>
+    <link rel="icon" href="images/world-icon">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <img src="images/logo.jpeg" alt="Nigeria Chamber of Commerce" class="logo">
+            <h1>Nigeria Chamber of Commerce</h1>
+            <button class="hamburger" id="menu-toggle">☰</button>
+            <nav id="nav-menu" class="hidden">
+                <a href="index.html">Home</a>
+                <a href="directory.html">Directory</a>
+                <a href="join.html">Join</a>
+                <a href="discover.html">Discover</a>
+                <button class="dark-mode-toggle">🌙</button>
+            </nav>
+        </div>
+    </header>
+    <div class="slider-box">
+        <ul>
+            <li>
+                <img src="images/abuja.png" alt="Abuja city" loading="lazy">
+                <div class="text">
+                    <h2>Welcome to the commerce chamber</h2>
+                    <button class="hero-button">Visit Now</button>
+                </div>
+            </li>
+            <li>
+                <img src="images/park.png" alt="Abuja's natural park">
+                <div class="text">
+                    <h2>Explore the incredible natural parks</h2>
+                    <button class="hero-button">Visit Now</button>
+                </div>
+            </li>
+            <li>
+                <img src="images/water.jpeg" alt="Nature">
+                <div class="text">
+                    <h2>Connect with nature</h2>
+                    <button class="hero-button">Visit Now</button>
+                </div>
+            </li>
+        </ul>
 
+    </div>
+    <main>
+        <section class="info-grid">
+            <article class="events">
+                <h2>Events</h2>
+                <p>Upcoming events and announcements.</p>
+            </article>
+            <section id="weather">
+                <article>
+                    <div class="card">
+                     <h2 id="town"></h2>
+                     <img id="graphic" src="" alt="">
+                     <p id="description"></p>
+                     <p id="humidity"></p>
+                     <p id="temperature"></p>
+                    </div>
+                </article>
+            </section>
+            <article class="forecast">
+                <h2>Weather Forecast</h2>
+                <p>Today: 90°F</p>
+                <p>Wednesday: 89°F</p>
+                <p>Thursday: 68°F</p>
+            </article>
+        </section>
+        <section id="spotlight">
+            <h2>Member Spotlights</h2>
+            <div class="spotlight-container"></div>
+        </section>
+    </main>
+    <footer>
+        <p>Nigeria Chamber of Commerce</p>
+        <p> Head Quaters, Abuja </p>
+        <p>Email: info@nigeriachamber.org | Phone: +(234)8124567890</p>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/"><img src="images/facebook.png" alt="facebook"></a>
+            <a href="https://www.Twitter.com/"><img src="images/x.png" alt="X"></a>
+            <a href="https://www.instagram.com"><img src="images/instagram.jpeg" alt="Instagram"></a>
+        </div>
+        <p>WDD 231 Class Project | Tawariowei Oyinpreye</p>
+        <p>Last Modification: <p>&#128641; <span id="currentyear"></span> &#128641; Tawariowei Oyinpreye &#128641; Abuja, Nigeria</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
