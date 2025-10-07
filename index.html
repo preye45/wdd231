@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <meta name="author" content="Tawariowei Oyinpreye" >
+    <meta name="description" content="WDD 131 Heaven Gabriel's Course Landing Page">
+    <title>WDD 231 - Web Frontend Development - Tawariowei Oyinpreye</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles/styles-small.css">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="scripts/script.js" defer></script>
+    <script src="scripts/course.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <div class="header">
+        <div class="header__logo">
+          <img src="images/preye.jpg" alt="Tawariowei oyinpreye" width="100" height="100">
+          <h2>Tawariowei Oyinpreye</h2>
+        </div>
+
+        <button id="menu-toggle" aria-label="Toggle Menu">&#9776;</button>
+      </div>
+
+      <nav id="nav-menu">
+        <ul class="nav-links">
+          <li><a href="#" class="active">Home</a></li>
+          <li><a href="chamber/directory.html">Chamber</a></li>
+          <li><a href="#">Final</a></li>
+          <li><a href="https://github.com/preye45">GitHub Profile</a></li>
+          <li><a href="https://www.linkedin.com">LinkedIn</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Home</h1>
+
+      <section class="section__intro">
+        <!--  Course Work   -->
+        <section>
+          <h2 class="section__head">Course Work</h2>
+          <ul>
+            <li>.</li>
+            <li>.</li>
+            <li>.</li>
+          </ul>
+        </section>
+
+        <!-- Location -->
+        <section class="section__location">
+          <h2 class="section__head">Abuja, Nigeria</h2>
+
+          <div class="section__location">
+            <img src="images/nigeria.webp" alt="Nigeria" width="200" />
+            <p>Abuja, Nigeria</p>
+          </div>
+        </section>
+      </section>
+
+
+
+        <section class="section__web">
+            <h2 class="section__head">Web and Computer Programming Certificate</h2>
+          
+            <div class="section__course">
+              <button data-filter="all">All</button>
+              <button data-filter="CSE">CSE</button>
+              <button data-filter="WDD">WDD</button>
+            </div>
+          
+            <ul id="course-list" class="section__courses"></ul>
+            <p id="total-credits"><strong>Total Credits:</strong> 0</p>
+
+          </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+      <h2>&copy; Tawariowei Oyinpreye Bayelsa</h2>
+      <p>Last Modified: <span id="date">05/03/2025</span></p>
+    </footer>
+    <!-- End of Footer Section -->
+  </body>
+</html>
