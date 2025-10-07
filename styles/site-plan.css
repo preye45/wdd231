@@ -1,0 +1,41 @@
+:root {
+    --primary-color: #4A7C59; /* Earthy green */
+    --accent-color: #E8DAB2;  /* Light sand */
+  }
+
+  body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: var(--accent-color);
+    margin: 0;
+    padding: 2rem;
+    color: #333;
+  }
+
+  h1, h2 {
+    font-family: 'Merriweather', serif;
+    color: var(--primary-color);
+  }
+
+  section {
+    margin-bottom: 2rem;
+    background: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  }
+
+  h2 {
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 0.25rem;
+  }
+
+  ul {
+    padding-left: 1.5rem;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid var(--primary-color);
+    border-radius: 5px;
+  }
