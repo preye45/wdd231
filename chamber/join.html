@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="course home page ">
+    <meta name="author" content="Tawariowei Oyinpreye">
+    <meta property="og:title" content="Chamber of Commerce home page">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="world.icon">
+    <meta property="og:url" content="https://example.com/directory.html">
+    <link rel="stylesheet" href="styles/join.css">
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/members.js" defer></script>
+    <title>JOIN Chamber page</title>
+    <link rel="icon" href="images/world.icon">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <img src="images/logo.jpeg" alt="Nigeria Chamber of Commerce" class="logo">
+            <h1>Join Chamber page</h1>
+            <button class="hamburger" id="menu-toggle">☰</button>
+            <nav id="nav-menu" class="hidden">
+                <a href="index.html">Home</a>
+                <a href="directory.html">Directory</a>
+                <a href="join.html">Join</a>
+                <a href="discover.html">Discover</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="form-container">
+            <h2>Membership Application</h2>
+            <form action="thankyou.html" method="get">
+                <label>
+                    First Name:
+                    <input type="text" name="first-name" required title="Enter your first name" autocomplete="given-name">
+                </label>
+                <label>
+                    Last Name:
+                    <input type="text" name="last-name" required title="Enter your last name" autocomplete="family-name">
+                </label>
+                <label>
+                    Organizational Title:
+                    <input type="text" name="organization-title" title="Enter your title" pattern="^[A-Za-z\- ]{7,}$" autocomplete="organization-title">
+                </label>
+                <label>
+                    Email:
+                    <input type="email" name="email" required title="Enter a valid email" autocomplete="email" placeholder="example@mail.com">
+                </label>
+                <label>
+                    Mobile Phone:
+                    <input type="tel" name="phone" required title="Enter your mobile number" autocomplete="tel">
+                </label>
+                <label>
+                    Business Name:
+                    <input type="text" name="organization" required title="Enter your business name" autocomplete="organization">
+                </label>
+                <label>
+                    Membership Level:
+                    <select name="membership-level">
+                        <option value="np">NP Membership (Free)</option>
+                        <option value="bronze">Bronze Membership</option>
+                        <option value="silver">Silver Membership</option>
+                        <option value="gold">Gold Membership</option>
+                    </select>
+                </label>
+                <label>
+                    Business Description:
+                    <textarea name="description" title="Describe your business"></textarea>
+                </label>
+                <input type="hidden" name="timestamp" id="timestamp">
+                <button type="submit">Submit Application</button>
+            </form>
+        </section>
+        <section class="membership-cards">
+            <div class="card" id="np">
+                <h3>NP Membership</h3>
+                <button onclick="openModal('modal-np')">More Info</button>
+            </div>
+            <div class="card" id="bronze">
+                <h3>Bronze Membership</h3>
+                <button onclick="openModal('modal-bronze')">More Info</button>
+            </div>
+            <div class="card" id="silver">
+                <h3>Silver Membership</h3>
+                <button onclick="openModal('modal-silver')">More Info</button>
+            </div>
+            <div class="card" id="gold">
+                <h3>Gold Membership</h3>
+                <button onclick="openModal('modal-gold')">More Info</button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>Nigeria Chamber of Commerce</p>
+        <p>HeadQuaters Abuja </p>
+        <p>Email: info@nigeriachamber.org | Phone: +(234)8124567890</p>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/"><img src="images/facebook.png" alt="facebook"></a>
+            <a href="https://www.Twitter.com/"><img src="images/x.png" alt="Twitter"></a>
+            <a href="https://www.instagram.com"><img src="images/instagram.jpeg" alt="Instagram"></a>
+        </div>
+        <p>WDD 231 Class Project | Diego Ortega</p>
+        <p>Last Modification: <p>&copy; <span id="currentyear"></span> &#128641; Tawariowei Oyinpreye &#128641; Abuja, Nigeria</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
