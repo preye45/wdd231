@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Tawariowei Oyinpreye">
+    <meta name="description" content="WDD 131 Tawariowei Oyinpreye Landing Page">
+    <title>Discover | Nigeria, Chamber of Commerce</title>
+    <meta property="og:title" content="Nigeria Chamber of Commerce - Official Site">
+    <meta property="og:description" content="Nigeria Chamber of Commerce. Discover events, directories, and more.">
+    <meta property="og:image" content="https://preye45.github.io/wdd231/chamber/images/chamber-logo.jpeg">
+    <meta property="og:url" content="https://preye45.github.io/wdd231/chamber/index.html">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="images/worldicon.jpeg" type="image/x-icon">
+    <link rel="stylesheet" href="styles/directory.css" media="screen">
+    <link rel="stylesheet" href="styles/directory-mobile.css" media="screen">
+    <link rel="stylesheet" href="styles/discovers.css" media="screen">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="scripts/directory.js" defer></script>
+    <script src="scripts/wayfinder.js" defer></script>
+    <script src="scripts/discover.js" defer></script>
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header>
+      <nav class="navbar">
+        <div class="logo">
+          <div class="logo-img">
+            <img src="images/logo.jpeg" alt="Chamber Logo" />
+          </div>
+          <div class="logo__text">
+            <h3>Nigeria</h3>
+            <p>Chamber of Commerce</p>
+          </div>
+        </div>
+        <button class="hamburger" id="hamburgerBtn">☰</button>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="directory.html">Directory</a></li>
+          <li><a href="join.html">Join</a></li>
+          <li><a href="discover.html">Discover</a></li>
+        </ul>
+        <div class="theme">
+          <button id="themeToggle" aria-label="Toggle dark mode">🌙</button>
+        </div>
+      </nav>
+    </header>
+    <!-- End of Header Section -->
+
+
+    <!-- Main Section -->
+    <main class="discover">
+        <h1>Discover HeadQuaters Abuja</h1>
+        <aside id="visit-message" class="visitor-message"></aside>
+        <section class="discover-grid" id="discoverGrid"></section>
+    </main>
+    <!-- End of Main Section -->
+
+
+    <!-- Footer Section -->
+    <footer>
+    <div class="footer__logo">
+        <div>
+        <img src="images/logo.jpeg" alt="Chamber Logo" width="100" height="100"/>
+        </div>
+        <div>
+        <h3>Nigeria, Chamber of commerce</h3>
+        <p>Abuja, Federal Capital Territory, Nigeria</p>
+        <p>info@nigeriachamber.org</p>
+        <p>+(234)8124567890</p>
+        </div>
+    </div>
+    <!-- Social Icons -->
+    <div class="social-icons">
+        <img src="images/facebook.png" alt="Facebook" />
+        <img src="images/x.png" alt="X" />
+        <img src="images/instagram.jpeg" alt="Instagram" />
+    </div>
+    <div>
+        <p>WDD231 Class Project</p>
+        <p>Tawariowei Oyinpreye</p>
+        <p>&copy; <span id="year"></span> Chamber of Commerce</p>
+        <p>Last Modified: <span id="lastModified"></span></p>
+    </div>
+    </footer>
+    <!-- End of Footer Section -->
+
+  </body>
+</html>
