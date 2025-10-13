@@ -1,0 +1,161 @@
+:root {
+  --primary-color: #4b4d39;
+  --secondary-color: #4c583e;
+  --accent1-color: #2c3424;
+  --accent2-color: #daded8;
+  --accent3-color: #768064;
+  --rich-black: #010b13;
+
+    font-family: Outfit, Raleway, sans-serif;
+    background-color: var(--accent-color3);
+    font-size: 16px;
+
+}
+
+
+
+
+.about-hero-msg {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+}
+
+.about-hero-msg img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+
+.about-container h1 {
+    position: absolute;
+    top: 50%;
+    text-align: center;
+    color: white;
+    font-size: 2rem;
+    
+}
+
+.about-msg {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 64px 20px;
+    text-align: center;
+}
+
+
+.join-container {
+    padding: 40px 20px;
+}
+
+.join-container h2 {
+    padding-bottom: 20px;
+}
+
+.join-child {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.join-child button {
+    padding: 12px 23px;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--primary-color);
+    color: white;
+    cursor: pointer;
+}
+
+.join-child button:hover {
+    background-color: var(--accent-color5);
+}
+
+input {
+    display: block;
+    padding: 15px;
+    border-radius: 5px;
+    width: 100%;
+    margin-bottom: 20px;
+    margin-top: 5px;
+    border: 1px solid lightgray;
+
+}
+
+.join-child div {
+    text-align: center;
+} 
+
+.join-child img {
+    width: 60%;
+    height: 60%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 1000px) {
+    .about-msg p,
+    .join-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .about-msg p {
+        font-size: 1.5rem;
+    }
+
+    .about-msg {
+        height: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .about-container h1 {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 4rem;
+    }
+
+
+    .join-child {
+        flex-direction: row;
+        gap: 60px;
+        align-items: center;
+    } 
+
+    .join-child img {
+        width: 70%;
+        height: 70%;
+    }
+
+    .join-child div {
+        width: 100%;
+        height: 100%;
+    }
+
+    form {
+        max-width: 500px;
+        width: 100%;
+    }
+
+    .about-hero-msg h1 {
+        text-align: center;
+    }
+
+    .join-container {
+        padding-top: 50px
+    }
+}
