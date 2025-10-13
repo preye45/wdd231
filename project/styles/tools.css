@@ -1,0 +1,163 @@
+:root {
+  --primary-color: #4b4d39;
+  --secondary-color: #4c583e;
+  --accent1-color: #2c3424;
+  --accent2-color: #daded8;
+  --accent3-color: #768064;
+  --rich-black: #010b13;
+
+    font-family: Outfit, Raleway, sans-serif;
+    background-color: var(--accent-color3);
+    font-size: 16px;
+
+}
+
+.event-hero {
+    margin-top: 25px;
+    margin-left: 15px;
+    margin-right: 15px;
+    border-radius: 15px;
+
+    padding: 15px;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                url('../images/event_hero.jpg') center center no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 500px;
+    width: auto;
+    color: white;    
+}
+
+.event-msg {
+    position: absolute;
+    bottom: 0;
+    padding-bottom: 40px;
+    padding-right: 10px;
+}
+
+.allevents-container {
+    margin-top: 50px;
+    padding: 10px;
+}
+
+.allevents-container h2 {
+    padding: 10px 0;
+}
+
+.dsAllEvents {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.eachItem {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+}
+
+.eachItem div {
+    width: auto;
+    height: 220px;
+}
+
+
+.eachItem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.eachItem ul {
+    padding: 14px;
+    line-height: 1.3;
+    background-color: var(--accent-color1);
+}
+
+.moreInfoWrapper {
+    width: auto;
+    height: 86vh;
+    color: var(--rich-black);
+    margin: 0 auto;
+    margin-top: 50px;
+    border: none;
+    border-radius: 6px;
+    padding: 20px 20px;
+    line-height: 2;
+
+}
+
+.moreInfoWrapper h2 {
+    margin-bottom: 10px;
+}
+
+.timeVenue {
+    margin: 20px 0;
+}
+
+.closeBtn{
+    cursor: pointer;
+    font-size: 20px;
+    display: flex;
+    justify-content: right;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 1000px) {
+
+    .event-hero,
+    .allevents-container
+    {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .event-hero {
+        margin-top: 50px;
+        height: 300px;
+        background: linear-gradient(to left, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.9)), 
+                    url('../images/event_hero.jpg') center center no-repeat;
+        background-size: cover;
+        padding-left: 30px;
+    }
+
+    .allevents-container {
+        margin-top: 50px;
+    }
+
+    .event-msg {
+        width: 600px;
+    }
+
+    .dsAllEvents {
+        display: grid;
+        grid: auto/1fr 1fr 1fr 1fr;        
+    }
+
+    .moreInfoWrapper {
+        width: 700px;
+        height: 80vh;
+        padding: 30px 30px;
+    }
+
+    .moreInfoWrapper h2 {
+        margin-bottom: 20px;
+    }
+
+}
