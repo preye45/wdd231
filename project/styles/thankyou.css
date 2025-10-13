@@ -1,0 +1,54 @@
+:root {
+  --primary-color: #4b4d39;
+  --secondary-color: #4c583e;
+  --accent1-color: #2c3424;
+  --accent2-color: #daded8;
+  --accent3-color: #768064;
+  --rich-black: #010b13;
+
+  font-family: Outfit, Raleway, sans-serif;
+  background-color: var(--accent-color3);
+  font-size: 16px;
+}
+
+.thanks-msg {
+  position: relative;
+  height: 100vh;
+  background: url("../images/thankyou-hero.jpg") center center no-repeat;
+  background-size: cover;
+  opacity: var(--rich-black) 0.6;
+}
+
+.thanks-msg p {
+  color: white;
+  font-size: 3rem;
+  font-family: Raleway, Outfit, sans-serif;
+  font-weight: 600;
+  text-align: center;
+}
+
+.thanks-msg div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.thanks-msg p:nth-of-type(2) {
+  color: var(--primary-color);
+  font-size: 4rem;
+}
+
+.thanks-msg div button {
+  padding: 12px 23px;
+  border-radius: 5px;
+  border: none;
+  background-color: var(--primary-color);
+  cursor: pointer;
+  margin: 0 auto;
+  display: block;
+}
+
+.thanks-msg a button {
+  color: white;
+}
