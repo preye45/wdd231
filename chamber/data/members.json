@@ -1,0 +1,66 @@
+[
+  {
+    "name": "Sparkle Tech Solutions",
+      "address": "15 Constitution Avenue, Central Business District, Abuja",
+      "phone": "+234 803 123 4567",
+      "website": "https://sparkletech.ng",
+      "image": "images/d.jpg",
+      "membershipLevel": 3,
+      "otherInfo": "Leading AI and cloud infrastructure providers in West Africa."
+    },
+    {
+      "name": "Green Garden Bistro",
+      "address": "42 Adetokunbo Ademola Crescent, Wuse 2, Abuja",
+      "phone": "+234 805 987 6543",
+      "website": "https://greengardenbistro.com",
+      "image": "images/g.jpg",
+      "membershipLevel": 2,
+      "otherInfo": "Organic farm-to-table dining experience in the heart of Wuse."
+    },
+    {
+      "name": "Skyline Architecture",
+      "address": "Plot 1021, Gana Street, Maitama, Abuja",
+      "phone": "+234 812 345 6789",
+      "website": "https://skyline-arch.ng",
+      "image": "images/j.jpg",
+      "membershipLevel": 3,
+      "otherInfo": "Sustainable urban planning and luxury residential design."
+    },
+    {
+      "name": "The Daily Grind Cafe",
+      "address": "Shop 12, Silverbird Galleria, Plot 1161, Memorial Drive, Abuja",
+      "phone": "+234 703 555 0101",
+      "website": "https://dailygrind.coffee",
+      "image": "images/c.jpg",
+      "membershipLevel": 1,
+      "otherInfo": "Freshly roasted Nigerian coffee beans and local pastries."
+    },
+    {
+      "name": "Peak Performance Gym",
+      "address": "Zone 5, Beside IBB Way, Wuse, Abuja",
+      "phone": "+234 809 111 2233",
+      "website": "https://peakfitness.ng",
+      "image": "images/p.jpg",
+      "membershipLevel": 2,
+      "otherInfo": "State-of-the-art equipment with Olympic-sized swimming pool."
+    },
+    {
+      "name": "Swift Logistics & Co.",
+      "address": "Nnamdi Azikiwe International Airport, Cargo Terminal, Abuja",
+      "phone": "+234 802 444 5566",
+      "website": "https://swiftlogistics.ng",
+      "image": "images/s.jpg",
+      "membershipLevel": 3,
+      "otherInfo": "Fast-track delivery services across the FCT and beyond."
+    },
+    {
+      "name": "Blue Ribbon Law Firm",
+      "address": "22 Area 3, Garki District, Abuja",
+      "phone": "+234 706 888 9900",
+      "website": "https://blueribbonlaw.ng",
+      "image": "images/l.jpg",
+      "membershipLevel": 1,
+      "otherInfo": "Corporate law experts specializing in startup compliance."
+    }
+  
+]
