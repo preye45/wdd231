@@ -1,111 +1,262 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="course home page ">
-    <meta name="author" content="Tawariowei Oyinpreye">
-    <meta property="og:title" content="Chamber of Commerce home page">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="world.icon">
-    <meta property="og:url" content="https://example.com/directory.html">
-    <link rel="stylesheet" href="styles/join.css">
-    <script src="scripts/date.js" defer></script>
-    <script src="scripts/navigation.js" defer></script>
-    <script src="scripts/members.js" defer></script>
-    <title>JOIN Chamber page</title>
-    <link rel="icon" href="images/world.icon">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Join | Nigeria Chamber of Commerce</title>
+  <meta name="description" content="Apply to join the Nigeria Chamber of Commerce and choose the membership level that suits your organization." />
+  <meta name="author" content="Oyinpreye Tawariowei" />
+
+  
+
+  
+  <link rel="stylesheet" href="styles/reset.css" />
+  <link rel="stylesheet" href="styles/base.css" />
 </head>
 <body>
-    <header>
-        <div class="header-container">
-            <img src="images/logo.jpeg" alt="Nigeria Chamber of Commerce" class="logo">
-            <h1>Join Chamber page</h1>
-            <button class="hamburger" id="menu-toggle">☰</button>
-            <nav id="nav-menu" class="hidden">
-                <a href="index.html">Home</a>
-                <a href="directory.html">Directory</a>
-                <a href="join.html">Join</a>
-                <a href="discover.html">Discover</a>
-            </nav>
-        </div>
-    </header>
-    <main>
-        <section class="form-container">
-            <h2>Membership Application</h2>
-            <form action="thankyou.html" method="get">
-                <label>
-                    First Name:
-                    <input type="text" name="first-name" required title="Enter your first name" autocomplete="given-name">
-                </label>
-                <label>
-                    Last Name:
-                    <input type="text" name="last-name" required title="Enter your last name" autocomplete="family-name">
-                </label>
-                <label>
-                    Organizational Title:
-                    <input type="text" name="organization-title" title="Enter your title" pattern="^[A-Za-z\- ]{7,}$" autocomplete="organization-title">
-                </label>
-                <label>
-                    Email:
-                    <input type="email" name="email" required title="Enter a valid email" autocomplete="email" placeholder="example@mail.com">
-                </label>
-                <label>
-                    Mobile Phone:
-                    <input type="tel" name="phone" required title="Enter your mobile number" autocomplete="tel">
-                </label>
-                <label>
-                    Business Name:
-                    <input type="text" name="organization" required title="Enter your business name" autocomplete="organization">
-                </label>
-                <label>
-                    Membership Level:
-                    <select name="membership-level">
-                        <option value="np">NP Membership (Free)</option>
-                        <option value="bronze">Bronze Membership</option>
-                        <option value="silver">Silver Membership</option>
-                        <option value="gold">Gold Membership</option>
-                    </select>
-                </label>
-                <label>
-                    Business Description:
-                    <textarea name="description" title="Describe your business"></textarea>
-                </label>
-                <input type="hidden" name="timestamp" id="timestamp">
-                <button type="submit">Submit Application</button>
-            </form>
-        </section>
-        <section class="membership-cards">
-            <div class="card" id="np">
-                <h3>NP Membership</h3>
-                <button onclick="openModal('modal-np')">More Info</button>
-            </div>
-            <div class="card" id="bronze">
-                <h3>Bronze Membership</h3>
-                <button onclick="openModal('modal-bronze')">More Info</button>
-            </div>
-            <div class="card" id="silver">
-                <h3>Silver Membership</h3>
-                <button onclick="openModal('modal-silver')">More Info</button>
-            </div>
-            <div class="card" id="gold">
-                <h3>Gold Membership</h3>
-                <button onclick="openModal('modal-gold')">More Info</button>
-            </div>
-        </section>
-    </main>
-    <footer>
-        <p>Nigeria Chamber of Commerce</p>
-        <p>HeadQuaters Abuja </p>
-        <p>Email: info@nigeriachamber.org | Phone: +(234)8124567890</p>
-        <div class="social-icons">
-            <a href="https://www.facebook.com/"><img src="images/facebook.png" alt="facebook"></a>
-            <a href="https://www.Twitter.com/"><img src="images/x.png" alt="Twitter"></a>
-            <a href="https://www.instagram.com"><img src="images/instagram.jpeg" alt="Instagram"></a>
-        </div>
-        <p>WDD 231 Class Project | Diego Ortega</p>
-        <p>Last Modification: <p>&copy; <span id="currentyear"></span> &#128641; Tawariowei Oyinpreye &#128641; Abuja, Nigeria</p>
-        <p id="lastModified"></p>
-    </footer>
+ <header class="site-header">
+    <div class="wrap header-bar">
+      <a class="brand" href="index.html" aria-label="Nigeria Chamber Home">
+        <img src="images/worldicon.jpeg" alt="Nigeria Chamber logo" class="brand-mark" width="28" height="28" />
+        <span class="brand-text">Nigeria Chamber</span>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="siteNav"
+        aria-label="Menu">☰</button>
+
+      <nav id="siteNav" class="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="directory.html">Directory</a></li>
+          <li><a href="discover.html">Discover</a></li>
+          <li><a href="join.html" aria-current="page">Join</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="join-layout">
+    <section class="join-form-section">
+      <h1>Join the Chamber</h1>
+      <p class="lead">
+        Apply to become a member of Nigeria Chamber of Commerce. Fill out the form below and select the membership level that  suits your organization.
+      </p>
+
+      
+      <form method="get" action="thankyou.html" class="join-form">
+       
+        <label title="Enter your first name">
+          First Name*
+          <input
+            type="text"
+            name="first-name"
+            required
+            autocomplete="given-name"
+            title="Please enter your first name"
+          />
+        </label>
+
+        
+        <label title="Enter your last name">
+          Last Name*
+          <input
+            type="text"
+            name="last-name"
+            required
+            autocomplete="family-name"
+            title="Please enter your last name"
+          />
+        </label>
+
+        
+        <label title="Your title within the organization (e.g., Marketing Director)">
+          Organizational Title
+          <input
+            type="text"
+            name="organization-title"
+            autocomplete="organization-title"
+            pattern="[A-Za-z\s-]{7,}"
+            title="Use at least 7 characters. Letters, spaces, and hyphens only."
+            placeholder="e.g., Marketing Director"
+          />
+        </label>
+
+        
+        <label title="Enter a valid email address">
+          Email Address*
+          <input
+            type="email"
+            name="email"
+            required
+            autocomplete="email"
+            placeholder="you@example.com"
+            title="Please enter a valid email address"
+          />
+        </label>
+
+        
+        <label title="Enter your mobile phone number">
+          Mobile Phone*
+          <input
+            type="tel"
+            name="phone"
+            required
+            autocomplete="tel"
+            title="Please enter your mobile phone number"
+            placeholder="(555) 555-5555"
+          />
+        </label>
+
+        
+        <label title="Enter the name of your business or organization">
+          Business / Organization Name*
+          <input
+            type="text"
+            name="organization"
+            required
+            autocomplete="organization"
+            title="Please enter your business or organization name"
+          />
+        </label>
+
+        
+        <fieldset class="membership-select" aria-label="Select a membership level">
+          <legend>Membership Level*</legend>
+
+          <label class="full-width" title="Choose a membership level">
+            <span class="sr-only">Membership Level</span>
+            <select name="membership-level" required>
+              <option value="">Select a membership level</option>
+              <option value="np">NP Membership (Non-profit, no fee)</option>
+              <option value="bronze">Bronze Membership</option>
+              <option value="silver">Silver Membership</option>
+              <option value="gold">Gold Membership</option>
+            </select>
+          </label>
+        </fieldset>
+
+        
+        <label title="Briefly describe your business or organization">
+          Business / Organization Description
+          <textarea
+            name="description"
+            rows="4"
+            title="Describe your business or organization"
+            placeholder="Tell us about what your organization does, who you serve, and your goals..."
+          ></textarea>
+        </label>
+
+        
+        <input
+          type="hidden"
+          name="timestamp"
+          id="timestamp"
+        />
+
+       
+        <input
+          type="submit"
+          value="Submit Application"
+          class="primary-button"
+        />
+      </form>
+    </section>
+
+    
+    <aside class="membership-cards" aria-label="Membership levels">
+      <h2>Membership Levels</h2>
+
+      <div class="membership-card-grid">
+        
+        <article class="membership-card" data-level="np">
+          <h3>NP Membership</h3>
+          <p>For nonprofit organizations. Enjoy core chamber benefits at no cost.</p>
+          <button type="button" class="membership-info" data-modal-target="np-modal">
+            View Benefits
+          </button>
+        </article>
+
+       
+        <article class="membership-card" data-level="bronze">
+          <h3>Bronze Membership</h3>
+          <p>Perfect for small businesses just getting started with the chamber.</p>
+          <button type="button" class="membership-info" data-modal-target="bronze-modal">
+            View Benefits
+          </button>
+        </article>
+
+       
+        <article class="membership-card" data-level="silver">
+          <h3>Silver Membership</h3>
+          <p>Enhanced visibility, event discounts, and added promotional opportunities.</p>
+          <button type="button" class="membership-info" data-modal-target="silver-modal">
+            View Benefits
+          </button>
+        </article>
+
+        
+        <article class="membership-card" data-level="gold">
+          <h3>Gold Membership</h3>
+          <p>Premium spotlight positions, maximum exposure, and VIP event access.</p>
+          <button type="button" class="membership-info" data-modal-target="gold-modal">
+            View Benefits
+          </button>
+        </article>
+      </div>
+    </aside>
+
+    
+    <dialog id="np-modal" class="membership-modal" aria-labelledby="np-modal-title">
+      <h2 id="np-modal-title">NP Membership Benefits</h2>
+      <ul>
+        <li>No membership fee for qualifying nonprofit organizations</li>
+        <li>Listing in the chamber online directory</li>
+        <li>Access to community networking events</li>
+        <li>Eligibility for nonprofit-focused training sessions</li>
+      </ul>
+      <button type="button" class="modal-close" data-close-modal>Close</button>
+    </dialog>
+
+    <dialog id="bronze-modal" class="membership-modal" aria-labelledby="bronze-modal-title">
+      <h2 id="bronze-modal-title">Bronze Membership Benefits</h2>
+      <ul>
+        <li>All NP Membership benefits</li>
+        <li>Business listing with logo in directory</li>
+        <li>Invitation to quarterly member mixers</li>
+        <li>Member-only pricing for select chamber events</li>
+      </ul>
+      <button type="button" class="modal-close" data-close-modal>Close</button>
+    </dialog>
+
+    <dialog id="silver-modal" class="membership-modal" aria-labelledby="silver-modal-title">
+      <h2 id="silver-modal-title">Silver Membership Benefits</h2>
+      <ul>
+        <li>All Bronze benefits</li>
+        <li>Featured spotlight placement on the home page rotation</li>
+        <li>Priority booth selection at chamber expos</li>
+        <li>Access to small business training &amp; workshops</li>
+      </ul>
+      <button type="button" class="modal-close" data-close-modal>Close</button>
+    </dialog>
+
+    <dialog id="gold-modal" class="membership-modal" aria-labelledby="gold-modal-title">
+      <h2 id="gold-modal-title">Gold Membership Benefits</h2>
+      <ul>
+        <li>All Silver benefits</li>
+        <li>Premium homepage spotlight positions</li>
+        <li>Exclusive sponsorship opportunities at major events</li>
+        <li>VIP access and recognition at chamber banquets</li>
+      </ul>
+      <button type="button" class="modal-close" data-close-modal>Close</button>
+    </dialog>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Nigeria Chamber of Commerce</p>
+  </footer>
+
+  
+  <script type="module" src="styles/scripts/join.js"></script>
 </body>
 </html>
