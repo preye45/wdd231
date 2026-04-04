@@ -1,42 +1,62 @@
-document.addEventListener("DOMContentLoaded", () => {
-  fetch("data/discover-data.json")
-    .then((res) => res.json())
-    .then((data) => {
-      const grid = document.getElementById("discoverGrid");
-      
-      data.forEach((item, i) => {
-        const card = document.createElement("article");
-        card.classList.add("discover-card");
-        card.style.gridArea = `card${i + 1}`;
-        card.innerHTML = `
-          <h2>${item.title}</h2>
-          <figure><img src="${item.image}" alt="${item.title}" loading="lazy"></figure>
-          <address>${item.address}</address>
-          <p>${item.description}</p>
-          <button>Learn More</button>
-        `;
-        grid.appendChild(card);
-      });
-    });
 
-  // Visit tracking
-  const visitMessage = document.getElementById("visit-message");
-  const lastVisit = localStorage.getItem("lastVisit");
+import { pointsOfInterest } from "../data/discover.mjs";
+
+const grid = document.querySelector("#discover-grid");
+const visitMessage = document.querySelector("#visit-message");
+
+
+function renderCards() {
+  if (!grid) return;
+
+  pointsOfInterest.forEach((poi, index) => {
+    const card = document.createElement("article");
+    card.classList.add("discover-card", `discover-card-${index + 1}`);
+
+    card.innerHTML = `
+      <h3>${poi.name}</h3>
+      <figure>
+        <img src="${poi.image}" alt="${poi.alt}" loading="lazy" width="300" height="200">
+        <figcaption class="visually-hidden">${poi.name}</figcaption>
+      </figure>
+      <address>${poi.address.replace(/\n/g, "<br>")}</address>
+      <p>${poi.description}</p>
+      <button type="button" class="learn-more-btn">Learn more</button>
+    `;
+
+    grid.appendChild(card);
+  });
+}
+
+
+function handleVisitMessage() {
+  if (!visitMessage) return;
+
   const now = Date.now();
+  const lastVisit = Number(localStorage.getItem("discoverLastVisit"));
+
+  let message = "";
 
   if (!lastVisit) {
-    visitMessage.textContent =
-      "Welcome! Let us know if you have any questions.";
+    message = "Welcome! Let us know if you have any questions.";
   } else {
-    const msDiff = now - Number(lastVisit);
-    const days = Math.floor(msDiff / (1000 * 60 * 60 * 24));
-    if (days < 1) {
-      visitMessage.textContent = "Back so soon! Awesome!";
-    } else if (days === 1) {
-      visitMessage.textContent = "You last visited 1 day ago.";
+    const millisecondsInDay = 1000 * 60 * 60 * 24;
+    const differenceInDays = Math.floor((now - lastVisit) / millisecondsInDay);
+
+    if (differenceInDays < 1) {
+      message = "Back so soon! Awesome!";
+    } else if (differenceInDays === 1) {
+      message = "You last visited 1 day ago.";
     } else {
-      visitMessage.textContent = `You last visited ${days} days ago.`;
+      message = `You last visited ${differenceInDays} days ago.`;
     }
   }
-  localStorage.setItem("lastVisit", now.toString());
+
+  visitMessage.textContent = message;
+  localStorage.setItem("discoverLastVisit", now.toString());
+}
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  renderCards();
+  handleVisitMessage();
 });
