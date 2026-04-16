@@ -1,69 +1,122 @@
-// scripts/index.js
-
-const toolContainer = document.querySelector('#tool-container');
-const modal = document.querySelector('#tool-modal');
-const modalContent = document.querySelector('#modal-content');
-const closeModal = document.querySelector('#close-modal');
-
-// 1. Fetch Data with Error Handling
-async function getTools() {
-    try {
-        const response = await fetch('data/tools.json');
-        if (!response.ok) throw new Error('Data not found');
-        const data = await response.json();
-        
-        displayTools(data);
-    } catch (error) {
-        console.error("Error fetching tools:", error);
-        toolContainer.innerHTML = "<p>Failed to load tools.</p>";
-    }
-}
-
-// 2. Dynamic Content Generation & Array Methods
-function displayTools(tools) {
-    toolContainer.innerHTML = ""; // Clear existing content
-    
-    // Process data using forEach (Array Method)
-    tools.forEach(tool => {
-        let card = document.createElement('div');
-        card.classList.add('tool-card');
-        
-        // Template Literals & 4 distinct properties (name, type, price, image)
-        card.innerHTML = `
-            <img src="${tool.image}" alt="${tool.name}" loading="lazy">
-            <h3>${tool.name}</h3>
-            <p>Category: ${tool.type}</p>
-            <p><strong>${tool.price}</strong></p>
-            <button class="view-details" data-id="${tool.id}">Details</button>
-        `;
-        
-        toolContainer.appendChild(card);
-    });
-
-    // 3. Event Handling for Modal
-    document.querySelectorAll('.view-details').forEach(button => {
-        button.addEventListener('click', (e) => {
-            const toolId = e.target.getAttribute('data-id');
-            const tool = tools.find(t => t.id == toolId);
-            showModal(tool);
-        });
-    });
-}
-
-// 4. Modal Interaction
-function showModal(tool) {
-    modalContent.innerHTML = `
-        <h2>${tool.name}</h2>
-        <p>${tool.description}</p>
-        <p>Rental Status: Available</p>
-    `;
-    modal.showModal();
-    
-    // 5. Local Storage (Persisting last viewed tool)
-    localStorage.setItem('lastViewedTool', tool.name);
-}
-
-closeModal.addEventListener('click', () => modal.close());
-
-// Initialize
-getTools();
+[
+  {
+    "id": 1,
+    "name": "Classic Mower",
+    "type": "Lawn Care",
+    "price": "$250",
+    "description": "Reliable gas-powered mower for medium lawns.",
+    "image": "images/grass.jpeg"
+  },
+  {
+    "id": 2,
+    "name": "Power Trimmer",
+    "type": "Lawn Care",
+    "price": "$120",
+    "description": "Precision edges for a professional finish.",
+    "image": "images/g.jpeg"
+  },
+  {
+    "id": 3,
+    "name": "Leaf Blower",
+    "type": "Cleanup",
+    "price": "$89",
+    "description": "High velocity air flow for quick leaf removal.",
+    "image": "images/gs.jpeg"
+  },
+  {
+    "id": 4,
+    "name": "Hedge Shear",
+    "type": "Pruning",
+    "price": "$45",
+    "description": "Manual shears with ergonomic comfort grips.",
+    "image": "images/tools.jpeg"
+  },
+  {
+    "id": 5,
+    "name": "Pressure Washer",
+    "type": "Cleanup",
+    "price": "$199",
+    "description": "3000 PSI washer for driveways and decks.",
+    "image": "images/washer.jpeg"
+  },
+  {
+    "id": 6,
+    "name": "Chainsaw",
+    "type": "Cutting",
+    "price": "$310",
+    "description": "Powerful engine for heavy-duty tree work.",
+    "image": "images/chainsaw.jpeg"
+  },
+  {
+    "id": 7,
+    "name": "Garden Rake",
+    "type": "Soil Prep",
+    "price": "$25",
+    "description": "Steel tines for leveling and debris collection.",
+    "image": "images/rake.jpeg"
+  },
+  {
+    "id": 8,
+    "name": "Wheelbarrow",
+    "type": "Transport",
+    "price": "$75",
+    "description": "Durable steel tray with a 6 cubic foot capacity.",
+    "image": "images/wheelbarrow.jpeg"
+  },
+  {
+    "id": 9,
+    "name": "Spade Shovel",
+    "type": "Digging",
+    "price": "$35",
+    "description": "Sharpened blade for easy soil penetration.",
+    "image": "images/shovel.jpeg"
+  },
+  {
+    "id": 10,
+    "name": "Electric Edger",
+    "type": "Lawn Care",
+    "price": "$140",
+    "description": "Clean, vertical cuts along walks and curbs.",
+    "image": "images/edger.jpeg"
+  },
+  {
+    "id": 11,
+    "name": "Garden Trowel",
+    "type": "Planting",
+    "price": "$15",
+    "description": "Handheld tool for potting and small digging.",
+    "image": "images/trowel.jpeg"
+  },
+  {
+    "id": 12,
+    "name": "Pruning Saw",
+    "type": "Pruning",
+    "price": "$30",
+    "description": "Folding blade for safe storage and transport.",
+    "image": "images/saw.jpeg"
+  },
+  {
+    "id": 13,
+    "name": "Snow Shovel",
+    "type": "Cleanup",
+    "price": "$40",
+    "description": "Wide poly blade designed for heavy snow.",
+    "image": "images/snow.jpeg"
+  },
+  {
+    "id": 14,
+    "name": "Lawn Roller",
+    "type": "Lawn Care",
+    "price": "$115",
+    "description": "Fill with water to level uneven ground.",
+    "image": "images/roller.jpeg"
+  },
+  {
+    "id": 15,
+    "name": "Pole Pruner",
+    "type": "Pruning",
+    "price": "$85",
+    "description": "Extendable reach for high tree branches.",
+    "image": "images/pole.jpeg"
+  }
+]
