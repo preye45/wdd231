@@ -90,18 +90,20 @@
 
 
         </section> 
-
         <section class="all-events"> 
-            <h2>Existing tools</h2>
-
-            <div class="toEvent new-btn">
-                <img src="images/grass.jpeg" alt="quality lawn mower">
-                <img src="images/g.jpeg" alt="quality lawn mower">
-                <img src="images/gs.jpeg" alt="quality lawn mower">
-            </div>
-
-            <a href="tools.html" class="toEvent new-btn">
-                More tools ➡
+            <h2>Our Professional Tools</h2>
+            <!-- This container will be populated by JavaScript -->
+            <div id="tool-container" class="toEvent"></div>
+            
+            <a href="tools.html" class="new-btn">More tools ➡</a>
+        </section>
+        
+        <!-- Modal for Tool Details -->
+        <dialog id="tool-modal" class="moreInfoWrapper">
+            <div id="modal-content"></div>
+            <button id="close-modal">Close</button>
+        </dialog>
+        
             </a>
 
         </section>
