@@ -1,121 +1,69 @@
-const eventContainer = document.querySelector('.event-container');
-const moreInfoWrapper = document.querySelector('.moreInfoWrapper')
+// scripts/index.js
 
-const key = 'SGAsgKjftKVJvlQdkQCsXnLgAukjz16E';
-const url = `https://app.ticketmaster.com/discovery/v2/events.json?countryCode=CA&stateCode=ON&size=20&apikey=${key}`;
+const toolContainer = document.querySelector('#tool-container');
+const modal = document.querySelector('#tool-modal');
+const modalContent = document.querySelector('#modal-content');
+const closeModal = document.querySelector('#close-modal');
 
-// Fetch data from TicketMaster
-async function fetchCanadaEventData() {
-    try{
-        const response = await fetch(url);
-
-        if(!response.ok) {
-            throw new Error(response.statusText);
-        }
-
-        const getData = await response.json();
-        // console.log(getData);
-        const data = getData._embedded.events;
-
-        buildEvent(data)
-
+// 1. Fetch Data with Error Handling
+async function getTools() {
+    try {
+        const response = await fetch('data/tools.json');
+        if (!response.ok) throw new Error('Data not found');
+        const data = await response.json();
         
+        displayTools(data);
     } catch (error) {
-        console.error(error);
-    };
-    
+        console.error("Error fetching tools:", error);
+        toolContainer.innerHTML = "<p>Failed to load tools.</p>";
+    }
 }
 
-fetchCanadaEventData();
-
-
-
-// Display events
-function buildEvent(data) {
-
-    eventContainer.innerHTML = '';
-
-    const topFourEvent = data.map(value => ({ value, sort: Math.random() }))
-    .sort((a, b) => a.sort - b.sort)
-    .map(({ value }) => value)
-    .slice(0, 4);
-
-    topFourEvent.forEach(event => {
-
-        const eachCont = document.createElement('div');
-        eachCont.classList.add('each-event');
+// 2. Dynamic Content Generation & Array Methods
+function displayTools(tools) {
+    toolContainer.innerHTML = ""; // Clear existing content
+    
+    // Process data using forEach (Array Method)
+    tools.forEach(tool => {
+        let card = document.createElement('div');
+        card.classList.add('tool-card');
         
-        // Event structure
-        eachCont.innerHTML = `
-            <div> 
-                <img src="${event.images[3].url}" alt="${event.name}" width="${event.images[3].width}" height="${event.images[3].height}" loading="lazy"> 
-            </div>
-    
-            <ul>
-                <li><strong> ${event.name} </strong></li>
-                
-                <li> ${new Date(event.dates.start.dateTime).toLocaleString('en-US', {
-                    month: "short",
-                    day: "2-digit",
-                    year: "numeric",
-                    hour: "numeric",
-                    minute: "2-digit",
-                    hour12: true
-                })} </li>
-    
-                <li> 
-                    ${event._embedded.venues[0].name}, 
-                    ${event._embedded.venues[0].city.name}, 
-                    ${event._embedded.venues[0].state.stateCode} 
-                </li>
-            </ul>
+        // Template Literals & 4 distinct properties (name, type, price, image)
+        card.innerHTML = `
+            <img src="${tool.image}" alt="${tool.name}" loading="lazy">
+            <h3>${tool.name}</h3>
+            <p>Category: ${tool.type}</p>
+            <p><strong>${tool.price}</strong></p>
+            <button class="view-details" data-id="${tool.id}">Details</button>
         `;
+        
+        toolContainer.appendChild(card);
+    });
 
-        // Display dialog view when each event is clicked
-        eachCont.addEventListener('click', ()=> {
-
-            moreInfoWrapper.innerHTML = `
-
-                <span class="closeBtn" autofocus>❌</span>
-
-                <h2>${event.name}</h2>
-                <p><strong>Important Event Info</strong> <br> ${event.pleaseNote || 'No additional information available.'}</p>
-                                
-                <div class="timeVenue">
-                    <p><strong>Date & Time:</strong> ${new Date(event.dates.start.dateTime).toLocaleString('en-US', {
-                        month: "short",
-                        day: "2-digit",
-                        year: "numeric",
-                        hour: "numeric",
-                        minute: "2-digit",
-                        hour12: true
-                    })}</p>
-
-                    <p><strong>Venue:</strong> 
-                        ${event._embedded.venues[0].name},
-                        ${event._embedded.venues[0].city.name},
-                        ${event._embedded.venues[0].state.stateCode}
-                    </p>
-                </div>
-
-                <p><strong>Additional Info</strong>
-                    ${event._embedded.venues[0].generalInfo.generalRule}
-                </p>
-
-            `;
-
-            // Close dialog
-            const closeBtn = moreInfoWrapper.querySelector('.closeBtn');
-            closeBtn.addEventListener('click', () => {
-                moreInfoWrapper.close();
-            });
-
-            moreInfoWrapper.showModal(); // Show dialog
+    // 3. Event Handling for Modal
+    document.querySelectorAll('.view-details').forEach(button => {
+        button.addEventListener('click', (e) => {
+            const toolId = e.target.getAttribute('data-id');
+            const tool = tools.find(t => t.id == toolId);
+            showModal(tool);
         });
-
-        eventContainer.appendChild(eachCont)
-    })
-
+    });
 }
 
-buildEvent();
+// 4. Modal Interaction
+function showModal(tool) {
+    modalContent.innerHTML = `
+        <h2>${tool.name}</h2>
+        <p>${tool.description}</p>
+        <p>Rental Status: Available</p>
+    `;
+    modal.showModal();
+    
+    // 5. Local Storage (Persisting last viewed tool)
+    localStorage.setItem('lastViewedTool', tool.name);
+}
+
+closeModal.addEventListener('click', () => modal.close());
+
+// Initialize
+getTools();
