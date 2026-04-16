@@ -1,69 +1,79 @@
-// scripts/index.js
-
-const toolContainer = document.querySelector('#tool-container');
-const modal = document.querySelector('#tool-modal');
+// Selecting elements from the DOM
+const toolsContainer = document.querySelector('#tools-container');
+const modal = document.querySelector('#tool-details');
 const modalContent = document.querySelector('#modal-content');
 const closeModal = document.querySelector('#close-modal');
 
-// 1. Fetch Data with Error Handling
-async function getTools() {
+// 1. Fetching Data using an Asynchronous Function
+async function fetchTools() {
     try {
-        const response = await fetch('data/tools.json');
-        if (!response.ok) throw new Error('Data not found');
-        const data = await response.json();
+        const response = await fetch('data/tools.json'); // Path to your JSON file
+        if (!response.ok) {
+            throw new Error('Could not fetch the tool data');
+        }
+        const tools = await response.json();
         
-        displayTools(data);
+        // 2. Processing Data with an Array Method (forEach)
+        displayTools(tools);
+        
     } catch (error) {
-        console.error("Error fetching tools:", error);
-        toolContainer.innerHTML = "<p>Failed to load tools.</p>";
+        console.error("Error:", error);
+        toolsContainer.innerHTML = `<p class="error">Sorry, we couldn't load the tools right now.</p>`;
     }
 }
 
-// 2. Dynamic Content Generation & Array Methods
+// 3. Dynamic Content Generation using Template Literals
 function displayTools(tools) {
-    toolContainer.innerHTML = ""; // Clear existing content
-    
-    // Process data using forEach (Array Method)
+    toolsContainer.innerHTML = ""; // Clear container first
+
     tools.forEach(tool => {
-        let card = document.createElement('div');
-        card.classList.add('tool-card');
-        
-        // Template Literals & 4 distinct properties (name, type, price, image)
-        card.innerHTML = `
+        // Create a card for each tool
+        const toolCard = document.createElement('div');
+        toolCard.className = 'tool-card';
+
+        // Displaying at least 4 distinct data properties (Image, Name, Type, Price)
+        toolCard.innerHTML = `
             <img src="${tool.image}" alt="${tool.name}" loading="lazy">
             <h3>${tool.name}</h3>
-            <p>Category: ${tool.type}</p>
-            <p><strong>${tool.price}</strong></p>
-            <button class="view-details" data-id="${tool.id}">Details</button>
+            <p class="category">${tool.type}</p>
+            <p class="price"><strong>${tool.price}</strong></p>
+            <button class="details-btn" data-id="${tool.id}">View Details</button>
         `;
-        
-        toolContainer.appendChild(card);
+
+        toolsContainer.appendChild(toolCard);
     });
 
-    // 3. Event Handling for Modal
-    document.querySelectorAll('.view-details').forEach(button => {
-        button.addEventListener('click', (e) => {
-            const toolId = e.target.getAttribute('data-id');
+    // Add Event Listeners to all "Details" buttons
+    const detailButtons = document.querySelectorAll('.details-btn');
+    detailButtons.forEach(button => {
+        button.addEventListener('click', (event) => {
+            const toolId = event.target.getAttribute('data-id');
             const tool = tools.find(t => t.id == toolId);
-            showModal(tool);
+            showDetails(tool);
         });
     });
 }
 
-// 4. Modal Interaction
-function showModal(tool) {
+// 4. Modal Dialog and Local Storage
+function showDetails(tool) {
     modalContent.innerHTML = `
         <h2>${tool.name}</h2>
-        <p>${tool.description}</p>
-        <p>Rental Status: Available</p>
+        <img src="${tool.image}" alt="${tool.name}" style="width:100%">
+        <p><strong>Category:</strong> ${tool.type}</p>
+        <p><strong>Description:</strong> ${tool.description}</p>
+        <p><strong>Price:</strong> ${tool.price}</p>
     `;
-    modal.showModal();
     
-    // 5. Local Storage (Persisting last viewed tool)
+    // Using Local Storage to save the user's last viewed item
     localStorage.setItem('lastViewedTool', tool.name);
+    
+    modal.showModal();
 }
 
-closeModal.addEventListener('click', () => modal.close());
+// Close the modal
+closeModal.addEventListener('click', () => {
+    modal.close();
+});
 
-// Initialize
-getTools();
+// Call the function to start the process
+fetchTools();
