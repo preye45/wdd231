@@ -1,89 +1,100 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
+<html lang="pt">
+<head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
-    <meta name="author" content="Tawariowei Oyinpreye" >
-    <meta name="description" content="WDD 131 Tawariowei Oyinpreye Course Landing Page">
-    <title>WDD 231 - Web Frontend Development - Tawariowei Oyinpreye</title>
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="styles/styles-small.css">
-    <link rel="stylesheet" href="styles/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 231</title>
+    <meta name="description" content="Home page of the WDD 231 course.">
+    <meta name="author" content="Oyinpreye Tawariowei">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <script src="scripts/script.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" 
+          integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" 
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/large.css">
+
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/navigation.js" defer></script>
     <script src="scripts/course.js" defer></script>
-  </head>
-  <body>
+    <link rel="icon" href="images/world.icon" type="image/x-icon">
+</head>
+<body>
     <header>
-      <div class="header">
-        <div class="header__logo">
-          <img src="images/preye.jpg" alt="Tawariowei oyinpreye" width="100" height="100">
-          <h2>Tawariowei Oyinpreye</h2>
+        <div class="logo-container">
+            <img src="images/ot.png" alt="site logo" loading="lazy" class="logo">
+            <span>Tawariowei Oyinpreye</span>
         </div>
-
-        <button id="menu-toggle" aria-label="Toggle Menu">&#9776;</button>
-      </div>
-
-      <nav id="nav-menu">
-        <ul class="nav-links">
-          <li><a href="#" class="active">Home</a></li>
-          <li><a href="chamber/directory.html">Chamber</a></li>
-          <li><a href="#">Final</a></li>
-          <li><a href="https://github.com/preye45">GitHub Profile</a></li>
-          <li><a href="https://www.linkedin.com">LinkedIn</a></li>
-        </ul>
-      </nav>
+        <button id="menu-toggle" aria-label="Toggle Navigation Menu" aria-expanded="false">☰</button>
     </header>
 
+    <nav>
+        <ul id="main-nav">
+            <li><a href="index.html" class="active"> Home</a></li>
+            <li><a href="#"> Chamber Project</a></li>
+            <li><a href="#"> Final Project</a></li>
+        </ul>
+    </nav>
+
     <main>
-      <h1>Home</h1>
+        <h1>Home</h1>
 
-      <section class="section__intro">
-        <!--  Course Work   -->
-        <section>
-          <h2 class="section__head">Course Work</h2>
-          <ul>
-            <li>.</li>
-            <li>.</li>
-            <li>.</li>
-          </ul>
+        <section class="summary">
+            <h2>About Me</h2>
+            <p>My name is Oyinpreye and I go by preye. I was born in Nigeria and live with my family in Bayelsa..</p> 
+            <p>I am
+                currently working as a caterer at home and I love to read novels, listen to music and try new things..  i have a degree in computer science at my local university here and i hope to learn more by enrolling in BYU-Pathway</BYU-Pathway></p>
+                <p> 
+            <p>I'm a member of The Church of Jesus Christ of Latter-day Saints, and I love to serve in my church callings. 
+               and I am blessed to be part of and learn more about the gospel from the church </p>
+            <p>In'm excited to be taking this course and learning more about web development. I hope to use the skills I learn in this course to create websites that are both functional and visually appealing.</p>  
         </section>
 
-        <!-- Location -->
-        <section class="section__location">
-          <h2 class="section__head">Abuja, Nigeria</h2>
-
-          <div class="section__location">
-            <img src="images/nigeria.webp" alt="Nigeria" width="200" />
-            <p>Abuja, Nigeria</p>
-          </div>
-        </section>
-      </section>
-
-
-
-        <section class="section__web">
-            <h2 class="section__head">Web and Computer Programming Certificate</h2>
-          
-            <div class="section__course">
-              <button data-filter="all">All</button>
-              <button data-filter="CSE">CSE</button>
-              <button data-filter="WDD">WDD</button>
+        <section class="photo">
+            <h2>Oyinpreye Tawariowei</h2>
+            <div class="student-photo-placeholder">
+                <img src="images/preye.jpg" alt="Oyinpreye Tawariowei" loading="lazy">
             </div>
-          
-            <ul id="course-list" class="section__courses"></ul>
-            <p id="total-credits"><strong>Total Credits:</strong> 0</p>
+        </section>
 
-          </section>
+        <section class="courses">
+            <h2>Web Certificate Courses</h2>
+            <div class="filter-buttons">
+                <button id="filter-all">All</button>
+                <button id="filter-cse">CSE</button>
+                <button id="filter-wdd">WDD</button>
+            </div>
+            
+            <div id="course-cards-container" class="card-grid">
+            </div>
+            
+            <p class="credits-total">The total credits for course listed above is <span id="total-credits">0</span></p>
+        </section>
     </main>
 
-    <!-- Footer Section -->
     <footer>
-      <h2>&copy; Tawariowei Oyinpreye Bayelsa</h2>
-      <p>Last Modified: <span id="date">05/03/2025</span></p>
+        <div class="social-media">
+            <a href="www.linkedin.com/oyinpreyetawariowei" target="_blank" aria-label="LinkedIn">
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/preye45/wdd231" target="_blank" aria-label="GitHub">
+                <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="https://x.com/?lang=pt" target="_blank" aria-label="Twitter/X">
+                <i class="fa-brands fa-x-twitter"></i>
+            </a>
+        </div>
+
+        <p>
+            &copy;<span id="currentyear"></span> • Oyinpreye Tawariowei • Nigeria
+        </p>
+
+        <p>Last Modification: <span id="lastModified"></span></p>
     </footer>
-    <!-- End of Footer Section -->
-  </body>
+</body>
 </html>
