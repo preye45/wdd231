@@ -1,83 +1,142 @@
-const directoryEl = document.getElementById('directory');
-const gridBtn = document.getElementById('gridBtn');
-const listBtn = document.getElementById('listBtn');
-const navToggle = document.getElementById('navToggle');
-const siteNav = document.getElementById('siteNav');
+let chamberMembers = [];
+let currentView = 'grid';
 
-document.getElementById('year').textContent = new Date().getFullYear();
-document.getElementById('lastModified').textContent = new Date(document.lastModified).toLocaleString();
+function loadFooterInfo() {
+const currentYear = new Date().getFullYear();
+document.getElementById('currentyear').textContent = currentYear;
+const lastModified = document.lastModified;
+document.getElementById('lastmodified').textContent = lastModified;
+}
 
-navToggle.addEventListener('click', () => {
-  const open = siteNav.classList.toggle('open');
-  navToggle.setAttribute('aria-expanded', String(open));
+function getLevelName(level) {
+switch (level) {
+case 3: return 'Gold';
+case 2: return 'Silver';
+case 1: return 'Basic';
+default: return 'Member';
+}
+}
+
+function getLevelClass(level) {
+switch (level) {
+case 3: return 'level-gold';
+case 2: return 'level-silver';
+case 1: return 'level-basic';
+default: return 'level-default';
+}
+}
+
+async function getMemberData() {
+try {
+const response = await fetch('data/members.json');
+if (!response.ok) {
+    throw new Error('HTTP error! status: ${response.status}');
+}
+
+chamberMembers = await response.json();
+
+displayMembers(chamberMembers, currentView);
+
+setupViewToggle();
+setupFilter();
+
+} catch (error) {
+console.error('Error fetching or processing JSON data:', error);
+document.getElementById('member-display').innerHTML = '<p>Unable to load member data. Check the console for more details.</p>';
+}
+}
+
+function getCurrentDisplayedMembers() {
+const filterSelect = document.getElementById('member-filter');
+const selectedLevel = filterSelect.value;
+
+if (selectedLevel === 'all') {
+return chamberMembers;
+}
+
+const levelToFilter = parseInt(selectedLevel);
+return chamberMembers.filter(member => member.membershipLevel === levelToFilter);
+}
+
+function setupFilter() {
+const filterSelect = document.getElementById('member-filter');
+
+filterSelect.addEventListener('change', () => {
+const filteredMembers = getCurrentDisplayedMembers();
+displayMembers(filteredMembers, currentView);
+});
+}
+
+function displayMembers(members, viewType) {
+const displayElement = document.getElementById('member-display');
+displayElement.innerHTML = '';
+
+currentView = viewType;
+displayElement.className = viewType === 'grid' ? 'grid-view' : 'list-view';
+
+members.forEach(member => {
+const memberContainer = document.createElement('div');
+memberContainer.classList.add('member-card');
+
+if (viewType === 'list') {
+memberContainer.classList.add('list-item');
+}
+
+const levelClass = getLevelClass(member.membershipLevel);
+memberContainer.classList.add(levelClass);
+
+if (viewType === 'grid') {
+memberContainer.innerHTML = `
+<img src="images/${member.image}" alt="${member.name} Logo">
+<h4>${member.name} (${getLevelName(member.membershipLevel)})</h4>
+<p>${member.description}</p>
+<p><strong>Phone:</strong> ${member.phone}</p>
+<p><strong>Address:</strong> ${member.address}</p>
+<p><strong>Website:</strong> <a href="${member.website}" target="_blank">${member.website}</a></p>
+`;
+} else {
+memberContainer.innerHTML = `
+<img src="images/${member.image}" alt="${member.name} Logo" style="width: 50px; height: 50px;">
+<h4>${member.name}</h4>
+<p>${member.address}</p>
+<p><a href="${member.website}" target="_blank">Visit Website</a></p>
+<p class="membership-level">${getLevelName(member.membershipLevel)}</p>
+`;
+}
+
+displayElement.appendChild(memberContainer);
 });
 
-
-const savedLayout = localStorage.getItem('directoryLayout') || 'grid';
-applyLayout(savedLayout);
-
-gridBtn.addEventListener('click', () => setLayout('grid'));
-listBtn.addEventListener('click', () => setLayout('list'));
-
-function setLayout(mode){
-  localStorage.setItem('directoryLayout', mode);
-  applyLayout(mode);
+if (members.length === 0) {
+displayElement.innerHTML = `<p style="text-align: center; grid-column: 1 / -1;">No members found at this membership level.</p>`;
+}
 }
 
-function applyLayout(mode){
-  directoryEl.classList.remove('grid','list');
-  directoryEl.classList.add(mode);
-  gridBtn.classList.toggle('active', mode === 'grid');
-  listBtn.classList.toggle('active', mode === 'list');
-  gridBtn.setAttribute('aria-pressed', String(mode === 'grid'));
-  listBtn.setAttribute('aria-pressed', String(mode === 'list'));
+function setupViewToggle() {
+const gridButton = document.getElementById('grid-view');
+const listButton = document.getElementById('list-view');
+
+gridButton.addEventListener('click', () => {
+const currentDisplayedMembers = getCurrentDisplayedMembers();
+displayMembers(currentDisplayedMembers, 'grid');
+gridButton.classList.add('active');
+listButton.classList.remove('active');
+});
+
+listButton.addEventListener('click', () => {
+const currentDisplayedMembers = getCurrentDisplayedMembers();
+displayMembers(currentDisplayedMembers, 'list');
+listButton.classList.add('active');
+gridButton.classList.remove('active');
+});
 }
 
+document.getElementById('menu-toggle').addEventListener('click', function () {
+const nav = document.querySelector('.main-nav');
+nav.classList.toggle('open');
+});
 
-(async function loadMembers(){
-  try {
-    const res = await fetch('data/members.json');
-    if(!res.ok) throw new Error(`HTTP ${res.status}`);
-    const members = await res.json();
-
-   
-    members.sort((a, b) => (b.membershipLevel ?? 1) - (a.membershipLevel ?? 1));
-
-    const frag = document.createDocumentFragment();
-    for(const m of members){
-      frag.appendChild(renderCard(m));
-    }
-    directoryEl.innerHTML = '';
-    directoryEl.appendChild(frag);
-  } catch (err) {
-    console.error('Failed to load members:', err);
-    directoryEl.innerHTML = `<p role="alert">Unable to load directory right now. Please refresh.</p>`;
-  }
-})();
-
-function renderCard(m){
-  const card = document.createElement('article');
-  card.className = 'card';
-
-  const imgSrc = m.image ? escapeAttr(m.image) : 'images/favicon.svg';
-  const websiteHTML = m.website
-    ? `<a class="website" href="${escapeAttr(m.website)}" target="_blank" rel="noopener">${escapeHTML(m.website)}</a>`
-    : '';
-
-  card.innerHTML = `
-    <div class="media">
-      <img src="${imgSrc}" alt="${escapeAttr(m.name)} logo" loading="lazy" width="640" height="360" />
-    </div>
-    <div class="body">
-      <h3 class="name">${escapeHTML(m.name)}</h3>
-      <span class="meta address">${escapeHTML(m.address)}</span>
-      <span class="meta phone"><a href="tel:${digits(m.phone)}">${escapeHTML(m.phone)}</a></span>
-      <span class="link">${websiteHTML}</span>
-    </div>
-  `;
-  return card;
-}
-
-function escapeHTML(s=''){ return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
-function escapeAttr(s=''){ return escapeHTML(s).replace(/"/g, '&quot;'); }
-function digits(t=''){ return String(t).replace(/\D+/g,''); }
+document.addEventListener('DOMContentLoaded', () => {
+loadFooterInfo();
+getMemberData();
+});
