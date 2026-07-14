@@ -1,86 +1,98 @@
+<!DOCTYPE html> html>
 
-<!doctype html>
-<html lang="en">
+<html lang="en-us">
+
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="Tawariowei Oyinpreye">
+<meta name="description"
+content="Business Directory of Nigeria Chamber of Commerce. Find local businesses, events, and information.">
 
-  <title>Nigerian Chamber | Directory</title>
-  <meta name="description" content="course home page" />
-  <meta name="author" content="Oyinpreye Tawariowei" />
+<title>Business Directory | Nigeria Chamber of Commerce</title>
 
-  
-  <meta property="og:title" content="Nigeria Chamber | Directory" />
-  <meta property="og:description" content="Discover businesses in Nigeria Chamber directory." />
-  <meta property="og:image" content="https://preye45.github.io/wdd231/chamber/images/worldicon.jpeg" />
-  <meta property="og:url" content="https://preye45.github.io/wdd231/chamber/directory.html" />
-  <meta property="og:type" content="website" />
+<link rel="icon" href="images/nig.png" type="image/x-icon">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Oswald:wght@500&display=swap"
+rel="stylesheet">
 
-  <link rel="icon" href="images/worldicon.jpeg" type="image/svg+xml" />
+<meta property="og:title" content="Nigeria Chamber of Commerce Business Directory">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://preye45.github.io/wdd231/chamber/directory.html">
+<meta property="og:image" content="https://preye45.github.io/wdd231/chamber/images/worldicon.jpeg" />
+<meta property="og:description" content="Find and support the best local businesses in Nigeria.">
 
 <link rel="stylesheet" href="styles/reset.css">
-<link rel="stylesheet" href="styles/base.css">
-<link rel="stylesheet" href="styles/home.css">
+<link rel="stylesheet" href="styles/main.css"></head>
 
-  <meta name="robots" content="index, follow" />
-</head>
 <body>
-   <header class="site-header">
-    <div class="wrap header-bar">
-      <a class="brand" href="index.html" aria-label="Nigeria Chamber Home">
-        <img src="images/logo.jpeg" alt="Nigeria Chamber logo" class="brand-mark" width="28" height="28" />
-        <span class="brand-text">Nigeria Chamber</span>
-      </a>
+<header>
+<div class="header-content">
+<a href="index.html" class="logo-link">
+<img src="images/nig.png" alt="Nigeria Chamber of Commerce Logo" class="logo">
+<p class="site-title-name">Nigeria Chamber of Commerce</p>
+</a>
+<button id="dark-mode-toggle" aria-label="Toggle dark mode"></button>
+<button id="menu-toggle" class="menu-button">☰</button>
+</div>
 
-      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="siteNav"
-        aria-label="Menu">☰</button>
+<nav class="main-nav">
+<ul id="primary-nav">
+<li><a href="index.html">Home</a></li>
+<li><a href="discover.html">Discover</a></li>
+<li><a href="directory.html" class="active">Business Directory</a></li>
+<li><a href="join.html">Join</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="events.html">Events</a></li>
+</ul>
+</nav>
+</header>
 
-      <nav id="siteNav" class="site-nav" aria-label="Main">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="directory.html"aria-current="page">Directory</a></li>
-          <li><a href="discover.html">Discover</a></li>
-          <li><a href="join.html">Join</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+<main>
+<div class="hero">
+<h1>Member Directory</h1>
+</div>
 
-  <main class="wrap">
-    <section class="page-intro">
-      <h1>Member Directory</h1>
-      <p>Browse local businesses. Toggle layout to suit your preference.</p>
+<section class="directory-options">
+<div class="view-toggle">
+<button id="grid-view" class="active">Grid</button>
+<button id="list-view">List</button>
+</div>
+<select id="member-filter">
+<option value="all">All Members</option>
+<option value="3">Gold</option>
+<option value="2">Silver</option>
+<option value="1">Basic</option>
+</select>
+</section>
 
-      <div class="layout-switch" role="group" aria-label="View options">
-        <button id="gridBtn" class="switch active" aria-pressed="true">Grid</button>
-        <button id="listBtn" class="switch" aria-pressed="false">List</button>
-      </div>
-    </section>
+<section id="member-display" class="grid-view">
+</section>
+</main>
 
-    <section id="directory" class="cards grid" aria-live="polite"></section>
-  </main>
+<footer>
+<div class="footer-grid">
+<div class="footer-info">
+<h3>Nigeria Chamber of Commerce</h3>
+<p>FCT, ABUJA</p>
+<p>Email: <a href="mailto:info@nigchamber.org">info@nigchamber.org</a></p>
+<p>Phone: (+234)7098564321</p>
+</div>
 
-  <footer class="site-footer">
-    <div class="wrap footer-grid">
-      <div>
-        <h2 class="footer-title">Nigeria Chamber of Commerce</h2>
-        <address>
-           FCT, ABUJA<br />
-          <a href="tel:+2347098564321">(+234)7098564321</a><br />
-          <a href="mailto:info@nigchamber.org">info@nigchamber.org</a>
-        </address>
-      </div>
+<div class="footer-social">
+<a href="#"><img src="images/youtube.webp" alt="Link to the Chamber's YouTube Profile"></a>
+<a href="#"><img src="images/x.webp" alt="Link to the Chamber's Twitter/X Profile"></a>
+<a href="#"><img src="images/linkedin.webp" alt="Link to the Chamber's LinkedIn Profile"></a>
+</div>
 
-      <div class="dev-meta">
-        <p>&copy; <span id="year"></span> Nigeria Chamber</p>
-        <p>Built by <strong>Oyinpreye Tawariowei</strong> • WDD 231</p>
-        <p>Last Modified: <span id="lastModified"></span></p>
-      </div>
-    </div>
-  </footer>
+<div class="footer-dev-info">
+<p>&copy; <span id="currentyear"></span> Nigeria Chamber of Commerce</p>
+<p>Oyinpreye Tawariowei | WDD 231 Class Project</p>
+<p>Last Modified: <span id="lastmodified"></span></p>
+</div>
+</div>
+</footer>
+<script src="scripts/directory.js" defer></script></body>
 
-  
-  <script src="scripts/directory.js" type="module"></script>
-</body>
 </html>
