@@ -1,138 +1,102 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="oyinpreye Tawariowei">
+<meta name="description"
+content="Welcome to Nigeria Chamber of Commerce. We promote local businesses.">
 
-  <title>Nigerian Chamber | Directory</title>
-  <meta name="description" content="course home page" />
-  <meta name="author" content="Oyinpreye Tawariowei" />
+<title>Home | Nigeria Chamber of Commerce</title>
 
-  
-  <meta property="og:title" content="Nigeria Chamber | Directory" />
-  <meta property="og:description" content="Discover businesses in Nigeria Chamber directory." />
-  <meta property="og:image" content="https://preye45.github.io/wdd231/chamber/images/worldicon.jpeg" />
-  <meta property="og:url" content="https://preye45.github.io/wdd231/chamber/directory.html" />
-  <meta property="og:type" content="website" />
+<link rel="icon" href="images/nig.png" type="image/x-icon">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Oswald:wght@500&display=swap"
+rel="stylesheet">
 
-  <link rel="icon" href="images/worldicon.jpeg" type="image/svg+xml" />
+<meta property="og:title" content="Nigeria Chamber of Commerce | Local Business Hub">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://preye45.github.io/wdd231/chamber/index.html">
+<meta property="og:image" content="https://preye45.github.io/wdd231/chamber/images/og_image.webp">
+<meta property="og:description" content="Welcome to Nigeria Chamber of Commerce.">
 
-<link rel="stylesheet" href="styles/reset.css">
+<link rel="stylesheet" href="styles/bs.css">
 <link rel="stylesheet" href="styles/base.css">
-<link rel="stylesheet" href="styles/home.css">
-
-  <meta name="robots" content="index, follow" />
-</head>
+<script src="scripts/home.js" defer></script>
+<script src="scripts/directory.js" defer></script></head>
 <body>
-   <header class="site-header">
-    <div class="wrap header-bar">
-      <a class="brand" href="index.html" aria-label="Nigeria Chamber Home">
-        <img src="images/logo.jpeg" alt="Nigeria Chamber logo" class="brand-mark" width="28" height="28" />
-        <span class="brand-text">Nigeria Chamber</span>
-      </a>
+<header>
+<div class="header-content">
+<a href="index.html" class="logo-link">
+<img src="images/nig.png" alt="Nigeria Chamber of Commerce Logo" class="logo">
+<p class="site-title-name">Nigeria Chamber of Commerce</p>
+</a>
+<button id="dark-mode-toggle" aria-label="Toggle dark mode"></button>
+<button id="menu-toggle" class="menu-button">☰</button>
+</div>
 
-      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="siteNav"
-        aria-label="Menu">☰</button>
+<nav class="main-nav">
+<ul id="primary-nav">
+<li><a href="index.html" class="active">Home</a></li>
+<li><a href="discover.html">Discover</a></li>
+<li><a href="directory.html">Business Directory</a></li>
+<li><a href="join.html">Join</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="events.html">Events</a></li>
+</ul>
+</nav>
+</header>
 
-      <nav id="siteNav" class="site-nav" aria-label="Main">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="directory.html"aria-current="page">Directory</a></li>
-          <li><a href="discover.html">Discover</a></li>
-          <li><a href="join.html">Join</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
+<main id="homepage-main">
+<section class="hero-section">
+<h1 class="hero-title">Welcome Nigeria's Chamber of Commerce</h1>
+<img src="images/abuja.png" alt="City Hero Image" class="hero-img">
+<a href="join.html" class="cta-button">Join Us!</a>
+</section>
+
+<section class="event-section">
+<strong>Chamber Meetup:</strong>
+Thursdays 4:00 PM at town square.
+</section>
+
+<section class="weather-section">
+<h2>Current Weather & Forecast</h2>
+<div id="current-weather"></div>
+<div id="weather-forecast"></div>
+</section>
+
+<section id="member-spotlights">
+<h2>Member Spotlights</h2>
+<div class="spotlight-container"></div>
+</section>
+
+</main>
+
+
+<footer>
+    <div class="footer-grid">
+    <div class="footer-info">
+    <h3>Nigeria Chamber of Commerce</h3>
+    <p>FCT, ABUJA</p>
+    <p>Email: <a href="mailto:info@nigchamber.org">info@nigchamber.org</a></p>
+    <p>Phone: (+234)7098564321</p>
     </div>
-  </header>
-
-  <aside id="infoBanner" class="info-banner" hidden>
-    <div class="wrap">
-      <p>
-        <strong>Chamber Meetup:</strong>
-        Thursdays 4:00 PM at town square.
-        <button id="dismissBanner" class="banner-dismiss" aria-label="Dismiss">×</button>
-      </p>
+    
+    <div class="footer-social">
+    <a href="#"><img src="images/youtube.webp" alt="Link to the Chamber's YouTube Profile"></a>
+    <a href="#"><img src="images/x.webp" alt="Link to the Chamber's Twitter/X Profile"></a>
+    <a href="#"><img src="images/linkedin.webp" alt="Link to the Chamber's LinkedIn Profile"></a>
     </div>
-  </aside>
-
-  <main class="wrap home">
-    <section class="hero" aria-label="Welcome">
-      <div class="hero-inner">
-        <h1>Connect and Grow.</h1>
-        <p>We help businesses connect with customers, partners, and resources.</p>
-        <div class="cta-row">
-          <a class="button primary" href="join.html">Join the Chamber</a>
-          <a class="button ghost" href="directory.html">Browse Directory</a>
-        </div>
-      </div>
-
-      <img class="hero-img" src="images/abuja.png" alt="FCT,ABUJA" loading="lazy" width="1600"
-        height="900" />
-      <div class="hero-overlay" aria-hidden="true"></div>
-    </section>
-
-    <section class="today" aria-label="Today">
-      <div class="today-card">
-        <h2>Now in Abuja</h2>
-        <p class="date" id="todayDate"></p>
-        <p class="last-visit">Your last visit: <span id="lastVisit">First time here—welcome!</span></p>
-      </div>
-
-      <div class="today-card" id="weather" aria-live="polite">
-        <h2>Weather</h2>
-        <p id="wxSummary">Loading…</p>
-        <p id="wxDetails" class="muted"></p>
-        <div class="forecast">
-          <h3>3-Day Forecast</h3>
-          <ul id="forecastList" class="forecast-list" aria-label="3 day forecast"></ul>
-        </div>
-      </div>
-
-      <div class="today-card">
-        <h2>Upcoming Events</h2>
-        <ul class="events" id="eventsList">
-          <li>Business After Hours — Thu 6:00 PM</li>
-          <li>Ribbon Cutting — Sat 11:00 AM</li>
-          <li>Small Biz Workshop — Mon 12:00 PM</li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="announcements" aria-labelledby="annc-h2">
-      <h2 id="annc-h2">Announcements</h2>
-      <ul class="annc-list">
-        <li><strong>Membership Drive:</strong> Join now and get discounts and a special  feature on our homepage.</li>
-       
-      </ul>
-    </section>
-
-    <section class="spotlights" aria-labelledby="spot-h2">
-      <h2 id="spot-h2">Member Spotlights</h2>
-      <div id="spotGrid" class="cards grid"></div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="wrap footer-grid">
-      <div>
-        <h2 class="footer-title">Nigeria Chamber of Commerce</h2>
-        <address>
-          FCT, ABUJA<br />
-          <a href="tel:+2347098564321">(+234)7098564321</a><br />
-          <a href="mailto:info@nigchamber.org">info@nigchamber.org</a>
-        </address>
-      </div>
-
-      <div class="dev-meta">
-        <p>&copy; <span id="year"></span> Nigeria Chamber</p>
-        <p>Made by <strong>Tawariowei Oyinpreye</strong> • WDD 231</p>
-        <p>Last Modified: <span id="lastModified"></span></p>
-      </div>
+    
+    <div class="footer-dev-info">
+    <p>&copy; <span id="currentyear"></span> Nigeria Chamber of Commerce</p>
+    <p>Oyinpreye Tawariowei | WDD 231 Class Project</p>
+    <p>Last Modified: <span id="lastmodified"></span></p>
     </div>
-  </footer>
-
-  <script src="scripts/home.js" type="module"></script>
-</body>
-
-</html>
+    </div>
+    </footer>
+    <script src="scripts/directory.js" defer></script></body>
+    
+    </html>
