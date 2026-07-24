@@ -1,7 +1,7 @@
 /* ====================================
-   
+   1. RESET & GENERAL TYPOGRAPHY
    ==================================== */
-   * {
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -10,7 +10,7 @@
 body {
     font-family: 'Roboto', Arial, sans-serif;
     background-color: #f9f9f9;
-    color: #090909;
+    color: #333;
     line-height: 1.6;
     max-width: 100%;
     overflow-x: hidden;
@@ -22,7 +22,7 @@ h1, h2, h3, h4 {
 }
 
 a {
-    color: #013618; 
+    color: #007a33; 
     text-decoration: none;
 }
 
@@ -41,11 +41,11 @@ footer .footer-grid,
 }
 
 /* ====================================
-   2. HEADER 
+   2. HEADER & NAVIGATION
    ==================================== */
 header {
-    background-color: #242222; 
-    color: rgb(193, 191, 191);
+    background-color: #343a40; 
+    color: white;
     padding: 1rem 0;
 }
 
@@ -69,7 +69,7 @@ header {
 .site-title-name {
     font-family: 'Oswald', sans-serif;
     font-size: 1.5rem; 
-    color: rgb(213, 210, 210);
+    color: white;
 }
 
 #menu-toggle,
@@ -104,7 +104,7 @@ header {
 
 .main-nav a:hover,
 .main-nav .active {
-    background-color: #00431f;
+    background-color: #017a3a;
     text-decoration: none;
 }
 
@@ -112,7 +112,7 @@ header {
    3. FOOTER
    ==================================== */
 footer {
-    background-color: #242222;
+    background-color: #343a40;
     color: white;
     padding: 20px 0;
     margin-top: 2rem;
@@ -127,21 +127,15 @@ footer {
 }
 
 .footer-info,
-.footer-social,
 .footer-dev-info {
     flex: 1 1 300px;
-}
-
-.footer-social img {
-    width: 30px;
-    height: 30px;
-    margin-right: 10px;
 }
 
 .footer-info a {
     color: #adb5bd;
 }
 
+/* Merged redundant .footer-social rules */
 .footer-social {
     flex: 1 1 300px;
     display: flex;
@@ -167,10 +161,9 @@ footer {
 }
 
 /* ====================================
-   4. homepage (index.html)
+   4. HOMEPAGE LAYOUT (index.html)
    ==================================== */
-
-   #homepage-main {
+#homepage-main {
     display: grid;
     gap: 20px;
 }
@@ -202,7 +195,7 @@ footer {
 
 .cta-button {
     display: inline-block;
-    background-color: #01923f;
+    background-color: #007a33;
     color: white;
     padding: 10px 20px;
     border-radius: 5px;
@@ -257,11 +250,9 @@ footer {
     margin-bottom: 10px;
 }
 
-
 /* ====================================
-   5.  DIRECTORY
+   5. DIRECTORY PAGE LAYOUT
    ==================================== */
-
 .hero h1 {
     text-align: center;
     margin-bottom: 1rem;
@@ -283,9 +274,9 @@ footer {
 }
 
 .view-toggle button.active {
-    background-color: #01923f;
+    background-color: #007a33;
     color: white;
-    border-color: #01923f;
+    border-color: #007a33;
 }
 
 #member-display.grid-view {
@@ -301,7 +292,6 @@ footer {
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
-    border-left: 5px solid transparent; 
 }
 
 .member-card:hover {
@@ -321,19 +311,17 @@ footer {
     display: grid;
     grid-template-columns: 100px 1fr 150px;
     align-items: center;
-    border-left-width: 5px;
     margin-bottom: 5px;
     transition: background-color 0.3s;
 }
 
 /* ====================================
-   6. membership
+   6. MEMBERSHIP LEVEL STYLING
    ==================================== */
-
 .member-card,
 .spotlight-card,
 .level-card { 
-    border-left: 8px solid transparent; 
+    border-left: 5px solid transparent; 
     transition: all 0.3s ease-in-out;
 }
 
@@ -342,7 +330,7 @@ footer {
 .level-card.level-gold { 
     border-color: #FFD700;
     box-shadow: 0 5px 15px rgba(255, 215, 0, 0.4);
-    background-color: #e6e5e3; /* Fundo */
+    background-color: #FFFBE6;
 }
 
 .member-card.level-gold h4,
@@ -355,9 +343,9 @@ footer {
 .member-card.level-silver,
 .spotlight-card.level-silver,
 .level-card.level-silver { 
-    border-color: #484747; 
-    box-shadow: 0 2px 8px rgba(218, 215, 215, 0.3);
-    background-color: #f3ebeb;
+    border-color: #C0C0C0; 
+    box-shadow: 0 2px 8px rgba(192, 192, 192, 0.3);
+    background-color: #FAFAFA;
 }
 
 .member-card.level-silver h4,
@@ -368,18 +356,18 @@ footer {
 }
 
 .level-card.level-np {
-    border-color: #01923f; 
+    border-color: #007a33; 
     background-color: #E6FFF1; 
 }
 
 .level-card.level-np h3 {
-    color: #01923f;
+    color: #007a33;
 }
 
 .level-card.level-bronze {
     border-color: #CD7F32;
     box-shadow: 0 1px 5px rgba(205, 127, 50, 0.2);
-    background-color: #fedbbd; 
+    background-color: #FFF5EC; 
 }
 
 .level-card.level-bronze h3 {
@@ -396,17 +384,17 @@ footer {
 }
 
 .list-view .member-card.level-basic {
-    background-color: #e9d1d1;
+    background-color: #f7f7f7;
 }
 
 .list-view .membership-level {
     font-weight: bold;
     text-align: right;
 }
-/* ====================================
-   7. MEDIA QUERIES 
-   ==================================== */
 
+/* ====================================
+   7. MEDIA QUERIES (RESPONSIVENESS)
+   ==================================== */
 @media (min-width: 768px) {
     #menu-toggle {
         display: none;
@@ -453,9 +441,8 @@ footer {
 }
 
 /* ====================================
-   8. (join.html)
+   8. JOIN PAGE LAYOUT (join.html)
    ==================================== */
-
 .join-content-grid {
     display: grid;
     gap: 30px;
@@ -471,13 +458,13 @@ footer {
 
 .membership-form fieldset {
     margin: 2rem 0;
-    border: 1px solid #01923f; 
+    border: 1px solid #007a33; 
     border-radius: 8px;
     padding: 1rem 2%;
 }
 
 .membership-form legend {
-    color: #01923f;
+    color: #007a33;
     margin: 0 1rem;
     padding: 0 0.5rem;
     font-size: 1.2rem;
@@ -510,7 +497,7 @@ footer {
 
 .membership-form .submit-btn {
     border: none;
-    background-color: #01923f;
+    background-color: #007a33;
     color: white;
     border-radius: 8px;
     padding: 0.75rem 1.5rem;
@@ -541,9 +528,6 @@ footer {
     transform: translateY(20px);
     transition: opacity 0.5s ease-out, transform 0.5s ease-out; 
 }
-
-.level-np { border-left: 5px solid #ccc; }
-.level-bronze { border-left: 5px solid #CD7F32; }
 
 /* --- Modals --- */
 .modal {
@@ -583,9 +567,8 @@ footer {
     cursor: pointer;
 }
 
-
 /* ====================================
-   9. MEDIA QUERIES 
+   9. MEDIA QUERIES (join.html Desktop)
    ==================================== */
 @media (min-width: 768px) {
     .join-content-grid {
@@ -616,9 +599,8 @@ footer {
 }
 
 /* ====================================
-   10.THANK YOU (thankyou.html)
+   10. THANK YOU PAGE LAYOUT (thankyou.html)
    ==================================== */
-
 #thankyou-main {
     padding: 2rem 1rem;
     display: flex;
@@ -662,7 +644,7 @@ footer {
 }
 
 #confirmation-details table tr:nth-child(even) {
-    background-color: #e8e7e7;
+    background-color: #f7f7f7;
 }
 
 #confirmation-details table td {
@@ -675,12 +657,11 @@ footer {
     color: #333;
 }
 
-
 .confirmation-message .cta-button {
     display: inline-block;
     margin-top: 20px;
     background-color: #343a40; 
-    color: rgb(203, 203, 203);
+    color: white;
     padding: 10px 20px;
     border-radius: 5px;
     font-weight: bold;
