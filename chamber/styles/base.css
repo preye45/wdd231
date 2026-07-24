@@ -1,7 +1,7 @@
 /* ====================================
    1. RESET & GENERAL TYPOGRAPHY
    ==================================== */
-* {
+   * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -17,12 +17,12 @@ body {
 }
 
 h1, h2, h3, h4 {
-    font-family: 'Oswald', sans-serif; 
+    font-family: 'Oswald', sans-serif;
     margin-bottom: 0.5rem;
 }
 
 a {
-    color: #007a33; 
+    color: #007a33;
     text-decoration: none;
 }
 
@@ -44,8 +44,8 @@ footer .footer-grid,
    2. HEADER & NAVIGATION
    ==================================== */
 header {
-    background-color: #343a40; 
-    color: white;
+    background-color: #343a40;
+    color: #ffffff;
     padding: 1rem 0;
 }
 
@@ -58,7 +58,7 @@ header {
 .logo-link {
     display: flex;
     align-items: center;
-    color: white;
+    color: #ffffff;
 }
 
 .logo {
@@ -68,15 +68,15 @@ header {
 
 .site-title-name {
     font-family: 'Oswald', sans-serif;
-    font-size: 1.5rem; 
-    color: white;
+    font-size: 1.5rem;
+    color: #ffffff;
 }
 
 #menu-toggle,
 #dark-mode-toggle {
     background: none;
-    border: 1px solid white;
-    color: white;
+    border: 1px solid #ffffff;
+    color: #ffffff;
     padding: 0.5rem;
     cursor: pointer;
     font-size: 1.2rem;
@@ -85,26 +85,26 @@ header {
 
 .main-nav ul {
     list-style: none;
-    display: none; 
-    flex-direction: column; 
+    display: none;
+    flex-direction: column;
     width: 100%;
     text-align: center;
     padding-top: 10px;
 }
 
 .main-nav.open ul {
-    display: flex; 
+    display: flex;
 }
 
 .main-nav a {
-    color: white;
+    color: #ffffff;
     padding: 0.5rem 1rem;
     display: block;
 }
 
 .main-nav a:hover,
 .main-nav .active {
-    background-color: #017a3a;
+    background-color: #007a33;
     text-decoration: none;
 }
 
@@ -113,7 +113,7 @@ header {
    ==================================== */
 footer {
     background-color: #343a40;
-    color: white;
+    color: #ffffff;
     padding: 20px 0;
     margin-top: 2rem;
 }
@@ -135,29 +135,28 @@ footer {
     color: #adb5bd;
 }
 
-/* Merged redundant .footer-social rules */
 .footer-social {
     flex: 1 1 300px;
     display: flex;
-    flex-direction: row; 
-    justify-content: flex-end; 
-    align-items: center; 
-    gap: 15px; 
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 15px;
 }
 
 .footer-social img {
-    width: 35px; 
+    width: 35px;
     height: 35px;
     object-fit: cover;
-    border-radius: 6px; 
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
-    transition: all 0.3s ease-in-out; 
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
 }
 
 .footer-social a:hover img {
-    transform: translateY(-4px); 
-    opacity: 0.8; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+    transform: translateY(-4px);
+    opacity: 0.8;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 /* ====================================
@@ -185,8 +184,8 @@ footer {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: white;
-    background-color: rgba(0, 0, 0, 0.6); 
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.6);
     padding: 10px 20px;
     border-radius: 5px;
     z-index: 10;
@@ -196,17 +195,17 @@ footer {
 .cta-button {
     display: inline-block;
     background-color: #007a33;
-    color: white;
+    color: #ffffff;
     padding: 10px 20px;
     border-radius: 5px;
     font-weight: bold;
     margin-top: 10px;
 }
 
-.weather-section, 
-.event-section, 
+.weather-section,
+.event-section,
 #member-spotlights {
-    background-color: white;
+    background-color: #ffffff;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -275,7 +274,7 @@ footer {
 
 .view-toggle button.active {
     background-color: #007a33;
-    color: white;
+    color: #ffffff;
     border-color: #007a33;
 }
 
@@ -286,7 +285,7 @@ footer {
 }
 
 .member-card {
-    background-color: white;
+    background-color: #ffffff;
     border: 1px solid #ddd;
     padding: 20px;
     border-radius: 8px;
@@ -305,7 +304,7 @@ footer {
 }
 
 .member-card.list-item {
-    background-color: white;
+    background-color: #ffffff;
     border: 1px solid #eee;
     padding: 10px 20px;
     display: grid;
@@ -320,14 +319,14 @@ footer {
    ==================================== */
 .member-card,
 .spotlight-card,
-.level-card { 
-    border-left: 5px solid transparent; 
+.level-card {
+    border-left: 5px solid transparent;
     transition: all 0.3s ease-in-out;
 }
 
 .member-card.level-gold,
 .spotlight-card.level-gold,
-.level-card.level-gold { 
+.level-card.level-gold {
     border-color: #FFD700;
     box-shadow: 0 5px 15px rgba(255, 215, 0, 0.4);
     background-color: #FFFBE6;
@@ -337,13 +336,13 @@ footer {
 .spotlight-card.level-gold h3,
 .level-card.level-gold h3,
 .member-card.level-gold .membership-level {
-    color: #CC9900; 
+    color: #CC9900;
 }
 
 .member-card.level-silver,
 .spotlight-card.level-silver,
-.level-card.level-silver { 
-    border-color: #C0C0C0; 
+.level-card.level-silver {
+    border-color: #C0C0C0;
     box-shadow: 0 2px 8px rgba(192, 192, 192, 0.3);
     background-color: #FAFAFA;
 }
@@ -352,12 +351,12 @@ footer {
 .spotlight-card.level-silver h3,
 .level-card.level-silver h3,
 .member-card.level-silver .membership-level {
-    color: #777777; 
+    color: #777777;
 }
 
 .level-card.level-np {
-    border-color: #007a33; 
-    background-color: #E6FFF1; 
+    border-color: #007a33;
+    background-color: #E6FFF1;
 }
 
 .level-card.level-np h3 {
@@ -367,11 +366,11 @@ footer {
 .level-card.level-bronze {
     border-color: #CD7F32;
     box-shadow: 0 1px 5px rgba(205, 127, 50, 0.2);
-    background-color: #FFF5EC; 
+    background-color: #FFF5EC;
 }
 
 .level-card.level-bronze h3 {
-    color: #CD7F32; 
+    color: #CD7F32;
 }
 
 .member-card.level-basic {
@@ -399,7 +398,7 @@ footer {
     #menu-toggle {
         display: none;
     }
-    
+
     .main-nav ul {
         display: flex !important;
         flex-direction: row;
@@ -412,9 +411,9 @@ footer {
 
     #homepage-main {
         grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: auto auto; 
+        grid-template-rows: auto auto;
     }
-    
+
     .hero-section {
         grid-column: 1 / -1;
     }
@@ -426,7 +425,7 @@ footer {
     .weather-section {
         grid-column: 2 / 3;
     }
-    
+
     #member-spotlights {
         grid-column: 3 / 4;
     }
@@ -452,13 +451,13 @@ footer {
 .join-content-grid h1 {
     text-align: center;
     margin-bottom: 1rem;
-    padding: 0; 
-    grid-column: 1 / -1; 
+    padding: 0;
+    grid-column: 1 / -1;
 }
 
 .membership-form fieldset {
     margin: 2rem 0;
-    border: 1px solid #007a33; 
+    border: 1px solid #007a33;
     border-radius: 8px;
     padding: 1rem 2%;
 }
@@ -498,7 +497,7 @@ footer {
 .membership-form .submit-btn {
     border: none;
     background-color: #007a33;
-    color: white;
+    color: #ffffff;
     border-radius: 8px;
     padding: 0.75rem 1.5rem;
     margin: 1rem 0 2rem 0;
@@ -518,20 +517,20 @@ footer {
 }
 
 .level-card {
-    background-color: white;
+    background-color: #ffffff;
     border: 1px solid #ddd;
     border-radius: 8px;
     padding: 20px;
-    margin-bottom: 15px; 
+    margin-bottom: 15px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     opacity: 0;
     transform: translateY(20px);
-    transition: opacity 0.5s ease-out, transform 0.5s ease-out; 
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
 }
 
 /* --- Modals --- */
 .modal {
-    display: none; 
+    display: none;
     position: fixed;
     z-index: 100;
     left: 0;
@@ -544,7 +543,7 @@ footer {
 
 .modal-content {
     background-color: #fefefe;
-    margin: 15% auto; 
+    margin: 15% auto;
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
@@ -572,11 +571,11 @@ footer {
    ==================================== */
 @media (min-width: 768px) {
     .join-content-grid {
-        grid-template-columns: 2fr 1fr; 
+        grid-template-columns: 2fr 1fr;
     }
 
     .membership-levels {
-        grid-column: 2 / 3; 
+        grid-column: 2 / 3;
     }
 
     .membership-form {
@@ -588,11 +587,11 @@ footer {
     .membership-form .submit-btn {
         max-width: 100%;
     }
-    
+
     .membership-levels h2 {
         text-align: left;
     }
-    
+
     .modal-content {
         margin: 10% auto;
     }
@@ -610,7 +609,7 @@ footer {
 }
 
 .confirmation-message {
-    background-color: white;
+    background-color: #ffffff;
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -620,7 +619,7 @@ footer {
 }
 
 #thankyou-main h1 {
-    color: #017a3a;
+    color: #007a33;
     font-size: 2.5rem;
     margin-bottom: 1.5rem;
 }
@@ -660,8 +659,8 @@ footer {
 .confirmation-message .cta-button {
     display: inline-block;
     margin-top: 20px;
-    background-color: #343a40; 
-    color: white;
+    background-color: #343a40;
+    color: #ffffff;
     padding: 10px 20px;
     border-radius: 5px;
     font-weight: bold;
