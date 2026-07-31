@@ -389,61 +389,8 @@ RESET & GENERAL TYPOGRAPHY
   /* ====================================
   7. JOIN PAGE LAYOUT
   ==================================== */
-  /* --- Initial hidden state for animated cards --- */
-  #card-np,
-  #card-bronze,
-  #card-silver,
-  #card-gold {
-    opacity: 0;
-    transition: opacity 0.6s ease;
-  }
-
-  #card-np.visible,
-  #card-bronze.visible,
-  #card-silver.visible,
-  #card-gold.visible {
-    opacity: 1;
-  }
-
-  /* --- Variant styles per membership tier --- */
-  .level-np .choose-plan-btn {
-    border-color: #6c757d;
-    background-color: #6c757d;
-  }
-
-  .level-np .choose-plan-btn:hover {
-    background-color: transparent;
-    color: #6c757d;
-  }
-
-  .level-bronze .choose-plan-btn {
-    border-color: #cd7f32;
-    background-color: #cd7f32;
-  }
-
-  .level-bronze .choose-plan-btn:hover {
-    background-color: transparent;
-    color: #cd7f32;
-  }
-
-  .level-silver .choose-plan-btn {
-    border-color: #a0a0a0;
-    background-color: #a0a0a0;
-  }
-
-  .level-silver .choose-plan-btn:hover {
-    background-color: transparent;
-    color: #a0a0a0;
-  }
-
-  .level-gold .choose-plan-btn {
-    border-color: #d4a017;
-    background-color: #d4a017;
-  }
-
-  .level-gold .choose-plan-btn:hover {
-    background-color: transparent;
-    color: #d4a017;
+  .level-card {
+  opacity: 0;
   }
   .join-content-grid {
   display: grid;
