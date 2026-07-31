@@ -395,10 +395,10 @@ RESET & GENERAL TYPOGRAPHY
     /* ====================================
     7. JOIN PAGE LAYOUT (join.html)
     ==================================== */
-    .join-content-grid {
+   .join-content-grid {
     display: grid;
-    gap: 30px;
-    padding: 1rem;
+    gap: 25px;
+    padding: 8rem;
     }
     
     .join-content-grid h1 {
@@ -410,13 +410,13 @@ RESET & GENERAL TYPOGRAPHY
     
     .membership-form fieldset {
     margin: 2rem 0;
-    border: 1px solid #007a33;
+    border: 1px solid #024a1f;
     border-radius: 8px;
     padding: 1rem 2%;
     }
     
     .membership-form legend {
-    color: #007a33;
+    color: #02421b;
     margin: 0 1rem;
     padding: 0 0.5rem;
     font-size: 1.2rem;
@@ -425,7 +425,7 @@ RESET & GENERAL TYPOGRAPHY
     .membership-form label.top {
     display: block;
     padding-top: 1rem;
-    color: #333333;
+    color: #505050;
     font-size: 0.9rem;
     }
     
@@ -439,17 +439,17 @@ RESET & GENERAL TYPOGRAPHY
     padding: 0.75rem;
     width: 100%;
     max-width: 20rem;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(246, 245, 245, 0.8);
     }
     
     .membership-form label.top textarea {
-    height: 100px;
+    height: 200px;
     max-width: 100%;
     }
     
     .membership-form .submit-btn {
     border: none;
-    background-color: #007a33;
+    background-color: #00461d;
     color: #ffffff;
     border-radius: 8px;
     padding: 0.75rem 1.5rem;
@@ -518,7 +518,6 @@ RESET & GENERAL TYPOGRAPHY
     text-decoration: none;
     cursor: pointer;
     }
-    
     /* ====================================
     8. THANK YOU PAGE LAYOUT (thankyou.html)
     ==================================== */
