@@ -1,59 +1,66 @@
 
-const timestampInput = document.querySelector('#timestamp');
+function animateCards() {
+    const cards = document.querySelectorAll('.level-card');
+    
+    cards.forEach((card, index) => {
+        const delay = index * 200; 
 
-if (timestampInput) {
-  
-  timestampInput.value = new Date().toISOString();
+        setTimeout(() => {
+            card.style.opacity = 1; 
+            card.style.transform = 'translateY(0)';
+            card.style.marginBottom = '15px'; 
+        }, 50 + delay);
+    });
 }
 
+// --- CONFIG  ---
+function setupModals() {
+    const modalLinks = document.querySelectorAll('[data-modal-target]');
+    const closeButtons = document.querySelectorAll('.modal .close-btn');
+    const modals = document.querySelectorAll('.modal');
 
-const menuToggle = document.querySelector('#menu-toggle');
-const primaryNav = document.querySelector('#primary-nav');
+    modalLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const modalId = link.getAttribute('data-modal-target');
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                modal.style.display = 'block';
+            }
+        });
+    });
 
-if (menuToggle && primaryNav) {
-  menuToggle.addEventListener('click', () => {
-    primaryNav.classList.toggle('open');
-    menuToggle.classList.toggle('open');
-  });
+    closeButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            btn.closest('.modal').style.display = 'none';
+        });
+    });
+
+    window.addEventListener('click', (e) => {
+        modals.forEach(modal => {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+    });
 }
 
-
-const infoButtons = document.querySelectorAll('.membership-info');
-const closeButtons = document.querySelectorAll('[data-close-modal]');
-const dialogs = document.querySelectorAll('dialog.membership-modal');
-
-infoButtons.forEach((button) => {
-  button.addEventListener('click', () => {
-    const modalId = button.getAttribute('data-modal-target');
-    const dialog = document.getElementById(modalId);
-
-    if (dialog && typeof dialog.showModal === 'function') {
-      dialog.showModal();
+// --- FORM ---
+function setupTimestampOnSubmit() {
+    const form = document.querySelector('.membership-form');
+    if (form) {
+        form.addEventListener('submit', () => {
+            const timestampField = document.getElementById('timestamp');
+            if (timestampField) {
+                timestampField.value = Date.now(); 
+            }
+        });
     }
-  });
-});
+}
 
-closeButtons.forEach((button) => {
-  button.addEventListener('click', () => {
-    const dialog = button.closest('dialog');
-    if (dialog) {
-      dialog.close();
-    }
-  });
-});
-
-
-dialogs.forEach((dialog) => {
-  dialog.addEventListener('click', (event) => {
-    const rect = dialog.getBoundingClientRect();
-    const clickedInDialog =
-      event.clientX >= rect.left &&
-      event.clientX <= rect.right &&
-      event.clientY >= rect.top &&
-      event.clientY <= rect.bottom;
-
-    if (!clickedInDialog) {
-      dialog.close();
-    }
-  });
+// --- GAP ---
+document.addEventListener('DOMContentLoaded', () => {
+    setupTimestampOnSubmit(); 
+    setupModals();
+    animateCards();
 });
