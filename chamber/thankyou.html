@@ -1,133 +1,93 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Thank You | Nigeria Chamber of Commerce</title>
-  <meta name="description" content="Thank you for applying to join the Nigeria Chamber of Commerce." />
-  <meta name="author" content="Oyinpreye Tawariowei" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="oyinpreye Tawariowei">
+<meta name="description"
+content="Welcome to Nigeria Chamber of Commerce. We promote local businesses.">
 
-  
-  <link rel="stylesheet" href="styles/reset.css" />
-  <link rel="stylesheet" href="styles/base.css" />
-</head>
+<title>Home | Nigeria Chamber of Commerce</title>
+
+<link rel="icon" href="images/nig.png" type="image/x-icon">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Oswald:wght@500&display=swap"
+rel="stylesheet">
+
+<meta property="og:title" content="Nigeria Chamber of Commerce | Local Business Hub">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://preye45.github.io/wdd231/chamber/index.html">
+<meta property="og:image" content="https://preye45.github.io/wdd231/chamber/images/og_image.webp">
+<meta property="og:description" content="Welcome to Nigeria Chamber of Commerce.Explore business , events and grow your busi">
+
+<link rel="stylesheet" href="styles/base.css">
+<link rel="stylesheet" href="styles/base2.css">
+<script src="scripts/home.js" defer></script>
+<script src="scripts/main.js" defer></script>
+<script src="scripts/join.js" defer></script>
+<script src="scripts/thankyou.js" defer></script>
+<script src="scripts/directory.js" defer></script></head>
 <body>
-  <header>
-    <div class="site-header">
-      <a href="index.html" class="brand">
-        <span class="brand-title">Nigeria Chamber of Commerce</span>
-      </a>
+<header>
+<div class="header-content">
+<a href="index.html" class="logo-link">
+<img src="images/nig.png" alt="Nigeria Chamber of Commerce Logo" class="logo">
+<p class="site-title-name">Nigeria Chamber of Commerce</p>
+</a>
+<button id="dark-mode-toggle" aria-label="Toggle dark mode"></button>
+<button id="menu-toggle" class="menu-button">☰</button>
+</div>
 
-      <button id="menu-toggle" class="menu-toggle" aria-label="Toggle navigation">
-        ☰
-      </button>
+<nav class="main-nav">
+<ul id="primary-nav">
+<li><a href="index.html" >Home</a></li>
+<li><a href="discover.html">Discover</a></li>
+<li><a href="directory.html">Business Directory</a></li>
+<li><a href="join.html" class="active">Join</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="events.html">Events</a></li>
+</ul>
+</nav>
+</header>
 
-      <nav id="primary-nav" class="primary-nav">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="discover.html">Discover</a></li>
-          <li><a href="directory.html">Directory</a></li>
-          <li><a href="join.html">Join</a></li>
-        </ul>
-      </nav>
+<main id="thankyou-main">
+    <section class="confirmation-message">
+    <h1>Thank You for Your Application!</h1>
+    <p> We have received your membership application for the Nigeria Chamber of Commerce.
+        A chamber representative will review your information and reach out to you soon.</p>
+    <p>Below are the confirmation details we received. Ensure all details are correct and contact us if there is any problem.</p>
+    
+    <div id="confirmation-details">
     </div>
-  </header>
-
-  <main class="thankyou-main">
-    <section class="thankyou-message">
-      <h1>Thank You for Your Application</h1>
-      <p>
-        We’ve received your membership application for the Nigeria Chamber of Commerce.
-        A chamber representative will review your information and reach out to you soon.
-      </p>
+    
+    <a href="index.html" class="cta-button">Return to Homepage</a>
     </section>
+</main>
 
-    <section class="application-summary">
-      <h2>Your Application Details</h2>
-
-      <dl class="summary-list">
-        <div>
-          <dt>First Name</dt>
-          <dd id="summary-first-name"></dd>
-        </div>
-        <div>
-          <dt>Last Name</dt>
-          <dd id="summary-last-name"></dd>
-        </div>
-        <div>
-          <dt>Email</dt>
-          <dd id="summary-email"></dd>
-        </div>
-        <div>
-          <dt>Mobile Phone</dt>
-          <dd id="summary-phone"></dd>
-        </div>
-        <div>
-          <dt>Business / Organization</dt>
-          <dd id="summary-organization"></dd>
-        </div>
-        <div>
-          <dt>Membership Level</dt>
-          <dd id="summary-membership"></dd>
-        </div>
-        <div>
-          <dt>Submitted At</dt>
-          <dd id="summary-timestamp"></dd>
-        </div>
-      </dl>
-    </section>
-  </main>
-
-  <footer>
-    <p>&copy; <span id="year"></span> Nigeria Chamber of Commerce</p>
-  </footer>
-
-  <script>
-   
-    const menuToggle = document.querySelector('#menu-toggle');
-    const primaryNav = document.querySelector('#primary-nav');
-
-    if (menuToggle && primaryNav) {
-      menuToggle.addEventListener('click', () => {
-        primaryNav.classList.toggle('open');
-        menuToggle.classList.toggle('open');
-      });
-    }
-
+<footer>
+    <div class="footer-grid">
+    <div class="footer-info">
+    <h3>Nigeria Chamber of Commerce</h3>
+    <p>FCT, ABUJA</p>
+    <p>Email: <a href="mailto:info@nigchamber.org">info@nigchamber.org</a></p>
+    <p>Phone: (+234)7098564321</p>
+    </div>
     
-    const yearSpan = document.querySelector('#year');
-    if (yearSpan) {
-      yearSpan.textContent = new Date().getFullYear();
-    }
-
+    <div class="footer-social">
+    <a href="#"><img src="images/youtube.webp" alt="Link to the Chamber's YouTube Profile"></a>
+    <a href="#"><img src="images/x.webp" alt="Link to the Chamber's Twitter/X Profile"></a>
+    <a href="#"><img src="images/linkedin.webp" alt="Link to the Chamber's LinkedIn Profile"></a>
+    </div>
     
-    const params = new URLSearchParams(window.location.search);
-
-    const firstName = params.get('first-name') || '—';
-    const lastName = params.get('last-name') || '—';
-    const email = params.get('email') || '—';
-    const phone = params.get('phone') || '—';
-    const organization = params.get('organization') || '—';
-    const membership = params.get('membership-level') || '—';
-    const timestamp = params.get('timestamp') || '—';
-
-    document.querySelector('#summary-first-name').textContent = firstName;
-    document.querySelector('#summary-last-name').textContent = lastName;
-    document.querySelector('#summary-email').textContent = email;
-    document.querySelector('#summary-phone').textContent = phone;
-    document.querySelector('#summary-organization').textContent = organization;
-
+    <div class="footer-dev-info">
+    <p>&copy; <span id="currentyear"></span> Nigeria Chamber of Commerce</p>
+    <p>Oyinpreye Tawariowei | WDD 231 Class Project</p>
+    <p>Last Modified: <span id="lastmodified"></span></p>
+    </div>
+    </div>
+    </footer>
     
-    let membershipLabel = membership;
-    if (membership === 'np') membershipLabel = 'NP Membership';
-    if (membership === 'bronze') membershipLabel = 'Bronze Membership';
-    if (membership === 'silver') membershipLabel = 'Silver Membership';
-    if (membership === 'gold') membershipLabel = 'Gold Membership';
-
-    document.querySelector('#summary-membership').textContent =
-      membership ? membershipLabel : '—';
-
-    document.querySelector('#summary-timestamp').textContent = timestamp;
-  </script>
-</body>
-</html>
+    
+    </html>
