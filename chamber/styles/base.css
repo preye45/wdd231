@@ -2,78 +2,82 @@
 RESET & GENERAL TYPOGRAPHY
 ==================================== */
 
-*{
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  }
-  body {
+}
+
+body {
   font-family: 'Roboto', Arial, sans-serif;
   background-color: #f9f9f9;
   color: #333333;
   line-height: 1.6;
   max-width: 100%;
   overflow-x: hidden;
-  }
-  
-  h1, h2, h3, h4 {
+}
+
+h1,
+h2,
+h3,
+h4 {
   font-family: 'Oswald', sans-serif;
   margin-bottom: 0.5rem;
-  }
-  
-  a {
+}
+
+a {
   color: #007a33;
   text-decoration: none;
-  }
-  
-  a:hover {
+}
+
+a:hover {
   text-decoration: underline;
-  }
-  
-  #member-display,
-  .directory-options,
-  header .header-content,
-  footer .footer-grid,
-  #homepage-main {
+}
+
+#member-display,
+.directory-options,
+header .header-content,
+footer .footer-grid,
+#homepage-main {
   max-width: 1200px;
   margin: 0 auto;
   padding: 1rem;
-  }
-  
-  /* ====================================
+}
+
+/* ====================================
   2. HEADER & NAVIGATION
   ==================================== */
-  header {
+header {
   background-color: #343a40;
   color: #ffffff;
   padding: 1rem 0;
-  }
-  
-  .header-content {
+}
+
+.header-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  }
-  
-  .logo-link {
+}
+
+.logo-link {
   display: flex;
   align-items: center;
   color: #ffffff;
-  }
-  
-  .logo {
+}
+
+.logo {
   height: 50px;
   margin-right: 10px;
-  }
-  
-  .site-title-name {
+}
+
+.site-title-name {
   font-family: 'Oswald', sans-serif;
   font-size: 1.5rem;
   color: #ffffff;
-  }
-  
-  #menu-toggle,
-  #dark-mode-toggle {
+}
+
+#menu-toggle,
+#dark-mode-toggle {
   background: none;
   border: 1px solid #ffffff;
   color: #ffffff;
@@ -81,105 +85,105 @@ RESET & GENERAL TYPOGRAPHY
   cursor: pointer;
   font-size: 1.2rem;
   margin-left: 0.5rem;
-  }
-  
-  .main-nav ul {
+}
+
+.main-nav ul {
   list-style: none;
   display: none;
   flex-direction: column;
   width: 100%;
   text-align: center;
   padding-top: 10px;
-  }
-  
-  .main-nav.open ul {
+}
+
+.main-nav.open ul {
   display: flex;
-  }
-  
-  .main-nav a {
+}
+
+.main-nav a {
   color: #ffffff;
   padding: 0.5rem 1rem;
   display: block;
-  }
-  
-  .main-nav a:hover,
-  .main-nav .active {
+}
+
+.main-nav a:hover,
+.main-nav .active {
   background-color: #007a33;
   text-decoration: none;
-  }
-  
-  /* ====================================
+}
+
+/* ====================================
   3. FOOTER
   ==================================== */
-  footer {
+footer {
   background-color: #343a40;
   color: #ffffff;
   padding: 20px 0;
   margin-top: 2rem;
-  }
-  
-  .footer-grid {
+}
+
+.footer-grid {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 20px;
   font-size: 0.9rem;
-  }
-  
-  .footer-info,
-  .footer-dev-info {
+}
+
+.footer-info,
+.footer-dev-info {
   flex: 1 1 300px;
-  }
-  
-  .footer-info a {
+}
+
+.footer-info a {
   color: #adb5bd;
-  }
-  
-  .footer-social {
+}
+
+.footer-social {
   flex: 1 1 300px;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
   align-items: center;
   gap: 15px;
-  }
-  
-  .footer-social img {
+}
+
+.footer-social img {
   width: 35px;
   height: 35px;
   object-fit: cover;
   border-radius: 6px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease-in-out;
-  }
-  
-  .footer-social a:hover img {
+}
+
+.footer-social a:hover img {
   transform: translateY(-4px);
   opacity: 0.8;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  }
-  
-  /* ====================================
+}
+
+/* ====================================
   4. HOMEPAGE LAYOUT
   ==================================== */
-  #homepage-main {
+#homepage-main {
   display: grid;
   gap: 20px;
-  }
-  
-  .hero-section {
+}
+
+.hero-section {
   position: relative;
   text-align: center;
   margin-bottom: 2rem;
-  }
-  
-  .hero-img {
+}
+
+.hero-img {
   width: 100%;
   height: 300px;
   object-fit: cover;
-  }
-  
-  .hero-section .hero-title {
+}
+
+.hero-section .hero-title {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -190,9 +194,9 @@ RESET & GENERAL TYPOGRAPHY
   border-radius: 5px;
   z-index: 10;
   font-size: 1.8rem;
-  }
-  
-  .cta-button {
+}
+
+.cta-button {
   display: inline-block;
   background-color: #007a33;
   color: #ffffff;
@@ -200,93 +204,93 @@ RESET & GENERAL TYPOGRAPHY
   border-radius: 5px;
   font-weight: bold;
   margin-top: 10px;
-  }
-  
-  .weather-section,
-  .event-section,
-  #member-spotlights {
+}
+
+.weather-section,
+.event-section,
+#member-spotlights {
   background-color: #ffffff;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  #current-weather {
+}
+
+#current-weather {
   display: flex;
   align-items: center;
   gap: 10px;
-  }
-  
-  #current-weather img {
+}
+
+#current-weather img {
   width: 50px;
   height: 50px;
-  }
-  
-  .weather-summary {
+}
+
+.weather-summary {
   display: flex;
   align-items: center;
-  }
-  
-  .temp {
+}
+
+.temp {
   font-size: 2rem;
   font-weight: bold;
-  }
-  
-  #member-spotlights .spotlight-container {
+}
+
+#member-spotlights .spotlight-container {
   display: flex;
   flex-direction: column;
   gap: 15px;
-  }
-  
-  .spotlight-card {
+}
+
+.spotlight-card {
   border: 1px solid #dddddd;
   border-left: 5px solid transparent;
   padding: 15px;
   text-align: center;
   transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
-  }
-  
-  .spotlight-card img {
+}
+
+.spotlight-card img {
   max-width: 80px;
   margin-bottom: 10px;
-  }
-  
-  /* ====================================
+}
+
+/* ====================================
   5. DIRECTORY PAGE LAYOUT
   ==================================== */
-  .hero h1 {
+.hero h1 {
   text-align: center;
   margin-bottom: 1rem;
   padding: 1rem 0;
-  }
-  
-  .directory-options {
+}
+
+.directory-options {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 1rem;
-  }
-  
-  .view-toggle button {
+}
+
+.view-toggle button {
   padding: 0.5rem 1rem;
   cursor: pointer;
   border: 1px solid #cccccc;
   background-color: #eeeeee;
-  }
-  
-  .view-toggle button.active {
+}
+
+.view-toggle button.active {
   background-color: #007a33;
   color: #ffffff;
   border-color: #007a33;
-  }
-  
-  #member-display.grid-view {
+}
+
+#member-display.grid-view {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
-  }
-  
-  .member-card {
+}
+
+.member-card {
   background-color: #ffffff;
   border: 1px solid #dddddd;
   border-left: 5px solid transparent;
@@ -294,19 +298,19 @@ RESET & GENERAL TYPOGRAPHY
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s, border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
-  }
-  
-  .member-card:hover {
+}
+
+.member-card:hover {
   transform: translateY(-5px);
-  }
-  
-  #member-display.list-view {
+}
+
+#member-display.list-view {
   display: flex;
   flex-direction: column;
   gap: 1px;
-  }
-  
-  .member-card.list-item {
+}
+
+.member-card.list-item {
   border: 1px solid #eeeeee;
   padding: 10px 20px;
   display: grid;
@@ -314,121 +318,122 @@ RESET & GENERAL TYPOGRAPHY
   align-items: center;
   margin-bottom: 5px;
   background-color: #ffffff;
-  }
-  
-  .list-view .membership-level {
+}
+
+.list-view .membership-level {
   font-weight: bold;
   text-align: right;
-  }
-  
-  /* ====================================
+}
+
+/* ====================================
   6. MEMBERSHIP LEVEL STYLING
   ==================================== */
-  .member-card.level-gold,
-  .spotlight-card.level-gold,
-  .level-card.level-gold {
+.member-card.level-gold,
+.spotlight-card.level-gold,
+.level-card.level-gold {
   border-left-color: #ffd700;
   box-shadow: 0 5px 15px rgba(255, 215, 0, 0.4);
   background-color: #fffbe6;
-  }
-  
-  .member-card.level-gold h4,
-  .spotlight-card.level-gold h3,
-  .level-card.level-gold h3,
-  .member-card.level-gold .membership-level {
+}
+
+.member-card.level-gold h4,
+.spotlight-card.level-gold h3,
+.level-card.level-gold h3,
+.member-card.level-gold .membership-level {
   color: #7a5a00;
-  }
-  
-  .member-card.level-silver,
-  .spotlight-card.level-silver,
-  .level-card.level-silver {
+}
+
+.member-card.level-silver,
+.spotlight-card.level-silver,
+.level-card.level-silver {
   border-left-color: #c0c0c0;
   box-shadow: 0 2px 8px rgba(192, 192, 192, 0.3);
   background-color: #fafafa;
-  }
-  
-  .member-card.level-silver h4,
-  .spotlight-card.level-silver h3,
-  .level-card.level-silver h3,
-  .member-card.level-silver .membership-level {
+}
+
+.member-card.level-silver h4,
+.spotlight-card.level-silver h3,
+.level-card.level-silver h3,
+.member-card.level-silver .membership-level {
   color: #555555;
-  }
-  
-  .level-card.level-np {
+}
+
+.level-card.level-np {
   border-left-color: #007a33;
   background-color: #e6fff1;
-  }
-  
-  .level-card.level-np h3 {
+}
+
+.level-card.level-np h3 {
   color: #007a33;
-  }
-  
-  .level-card.level-bronze {
+}
+
+.level-card.level-bronze {
   border-left-color: #cd7f32;
   box-shadow: 0 1px 5px rgba(205, 127, 50, 0.2);
   background-color: #fff5ec;
-  }
-  
-  .level-card.level-bronze h3 {
+}
+
+.level-card.level-bronze h3 {
   color: #7a4f1a;
-  }
-  
-  .member-card.level-basic {
+}
+
+.member-card.level-basic {
   border-left-color: #cd7f32;
-  }
-  
-  .member-card.level-basic h4,
-  .member-card.level-basic .membership-level {
+}
+
+.member-card.level-basic h4,
+.member-card.level-basic .membership-level {
   color: #4a4a4a;
-  }
-  
-  .list-view .member-card.level-basic {
+}
+
+.list-view .member-card.level-basic {
   background-color: #f7f7f7;
-  }
-  
-  /* ====================================
+}
+
+/* ====================================
   7. JOIN PAGE LAYOUT
   ==================================== */
-  .level-card {
+.level-card {
   opacity: 0;
-  }
-  .join-content-grid {
+}
+
+.join-content-grid {
   display: grid;
   gap: 25px;
   padding: 8rem;
-  }
-  
-  .join-content-grid h1 {
+}
+
+.join-content-grid h1 {
   text-align: center;
   margin-bottom: 1rem;
   padding: 0;
   grid-column: 1 / -1;
-  }
-  
-  .membership-form fieldset {
+}
+
+.membership-form fieldset {
   margin: 2rem 0;
   border: 1px solid #024a1f;
   border-radius: 8px;
   padding: 1rem 2%;
-  }
-  
-  .membership-form legend {
+}
+
+.membership-form legend {
   color: #02421b;
   margin: 0 1rem;
   padding: 0 0.5rem;
   font-size: 1.2rem;
-  }
-  
-  .membership-form label.top {
+}
+
+.membership-form label.top {
   display: block;
   padding-top: 1rem;
   color: #505050;
   font-size: 0.9rem;
-  }
-  
-  .membership-form label.top input,
-  .membership-form label.top select,
-  .membership-form label.top textarea {
+}
+
+.membership-form label.top input,
+.membership-form label.top select,
+.membership-form label.top textarea {
   display: block;
   font-size: 1rem;
   border: solid 1px #cccccc;
@@ -437,14 +442,14 @@ RESET & GENERAL TYPOGRAPHY
   width: 100%;
   max-width: 20rem;
   background-color: #f6f5f5;
-  }
-  
-  .membership-form label.top textarea {
+}
+
+.membership-form label.top textarea {
   height: 200px;
   max-width: 100%;
-  }
-  
-  .membership-form .submit-btn {
+}
+
+.membership-form .submit-btn {
   border: none;
   background-color: #00461d;
   color: #ffffff;
@@ -456,17 +461,17 @@ RESET & GENERAL TYPOGRAPHY
   font-weight: bold;
   cursor: pointer;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  .membership-levels {
+}
+
+.membership-levels {
   text-align: center;
-  }
-  
-  .membership-levels h2 {
+}
+
+.membership-levels h2 {
   margin-bottom: 1rem;
-  }
-  
-  .level-card {
+}
+
+.level-card {
   background-color: #ffffff;
   border: 1px solid #dddddd;
   border-left: 5px solid transparent;
@@ -477,10 +482,10 @@ RESET & GENERAL TYPOGRAPHY
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.5s ease-out, transform 0.5s ease-out, border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
-  }
-  
-  /* --- Modals --- */
-  .modal {
+}
+
+/* --- Modals --- */
+.modal {
   display: none;
   position: fixed;
   z-index: 100;
@@ -490,9 +495,9 @@ RESET & GENERAL TYPOGRAPHY
   height: 100%;
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.4);
-  }
-  
-  .modal-content {
+}
+
+.modal-content {
   background-color: #fefefe;
   margin: 15% auto;
   padding: 20px;
@@ -500,35 +505,35 @@ RESET & GENERAL TYPOGRAPHY
   width: 80%;
   max-width: 500px;
   border-radius: 10px;
-  }
-  
-  .close-btn {
+}
+
+.close-btn {
   color: #555555;
   float: right;
   font-size: 28px;
   font-weight: bold;
   cursor: pointer;
-  }
-  
-  .close-btn:hover,
-  .close-btn:focus {
+}
+
+.close-btn:hover,
+.close-btn:focus {
   color: #333333;
   text-decoration: none;
   cursor: pointer;
-  }
-  
-  /* ====================================
+}
+
+/* ====================================
   8. THANK YOU PAGE LAYOUT
   ==================================== */
-  #thankyou-main {
+#thankyou-main {
   padding: 2rem 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 50vh;
-  }
-  
-  .confirmation-message {
+}
+
+.confirmation-message {
   background-color: #ffffff;
   padding: 30px;
   border-radius: 10px;
@@ -536,46 +541,46 @@ RESET & GENERAL TYPOGRAPHY
   max-width: 600px;
   width: 100%;
   text-align: center;
-  }
-  
-  #thankyou-main h1 {
+}
+
+#thankyou-main h1 {
   color: #007a33;
   font-size: 2.5rem;
   margin-bottom: 1.5rem;
-  }
-  
-  .confirmation-message p {
+}
+
+.confirmation-message p {
   margin-bottom: 1rem;
-  }
-  
-  #confirmation-details {
+}
+
+#confirmation-details {
   margin: 20px 0;
   text-align: left;
   border-top: 1px solid #dddddd;
   padding-top: 15px;
-  }
-  
-  #confirmation-details table {
+}
+
+#confirmation-details table {
   width: 100%;
   border-collapse: collapse;
   font-size: 0.95rem;
-  }
-  
-  #confirmation-details table tr:nth-child(even) {
+}
+
+#confirmation-details table tr:nth-child(even) {
   background-color: #f7f7f7;
-  }
-  
-  #confirmation-details table td {
+}
+
+#confirmation-details table td {
   padding: 8px 0;
   border-bottom: 1px dashed #eeeeee;
-  }
-  
-  #confirmation-details table strong {
+}
+
+#confirmation-details table strong {
   font-weight: 700;
   color: #333333;
-  }
-  
-  .confirmation-message .cta-button {
+}
+
+.confirmation-message .cta-button {
   display: inline-block;
   margin-top: 20px;
   background-color: #343a40;
@@ -585,83 +590,268 @@ RESET & GENERAL TYPOGRAPHY
   font-weight: bold;
   text-decoration: none;
   transition: background-color 0.3s;
-  }
-  
-  .confirmation-message .cta-button:hover {
+}
+
+.confirmation-message .cta-button:hover {
   background-color: #4a545e;
   text-decoration: none;
-  }
-  
-  /* ====================================
+}
+
+/* ====================================
   9. MEDIA QUERIES
   ==================================== */
-  @media (min-width: 768px) {
+@media (min-width: 768px) {
   #menu-toggle {
-  display: none;
+    display: none;
   }
-  
+
   .main-nav ul {
-  display: flex !important;
-  flex-direction: row;
-  justify-content: center;
+    display: flex !important;
+    flex-direction: row;
+    justify-content: center;
   }
-  
+
   .main-nav a {
-  padding: 0.5rem 1.5rem;
+    padding: 0.5rem 1.5rem;
   }
-  
+
   #homepage-main {
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: auto auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
   }
-  
+
   .hero-section {
-  grid-column: 1 / -1;
+    grid-column: 1 / -1;
   }
-  
+
   .event-section {
-  grid-column: 1 / 2;
+    grid-column: 1 / 2;
   }
-  
+
   .weather-section {
-  grid-column: 2 / 3;
+    grid-column: 2 / 3;
   }
-  
+
   #member-spotlights {
-  grid-column: 3 / 4;
+    grid-column: 3 / 4;
   }
-  
+
   .member-card.list-item {
-  grid-template-columns: 80px 300px 1fr 120px 100px;
+    grid-template-columns: 80px 300px 1fr 120px 100px;
   }
-  
+
   .footer-grid {
-  justify-content: space-around;
+    justify-content: space-around;
   }
-  
+
   .join-content-grid {
-  grid-template-columns: 2fr 1fr;
+    grid-template-columns: 2fr 1fr;
   }
-  
+
   .membership-levels {
-  grid-column: 2 / 3;
+    grid-column: 2 / 3;
   }
-  
+
   .membership-form {
-  grid-column: 1 / 2;
+    grid-column: 1 / 2;
   }
-  
+
   .membership-form label.top input,
   .membership-form label.top select,
   .membership-form .submit-btn {
-  max-width: 100%;
+    max-width: 100%;
   }
-  
+
   .membership-levels h2 {
-  text-align: left;
+    text-align: left;
   }
-  
+
   .modal-content {
-  margin: 10% auto;
+    margin: 10% auto;
   }
+}
+.discover-main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.discover-intro h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.discover-intro p {
+  max-width: 60ch;
+}
+
+.visit-message {
+  margin-top: 0.75rem;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  background-color: rgba(0, 0, 0, 0.06);
+  font-weight: 500;
+}
+
+.discover-grid-section {
+  margin-top: 2rem;
+}
+
+.discover-grid-note {
+  max-width: 60ch;
+  font-size: 0.95rem;
+  color: var(--muted-text, #525151);
+}
+
+
+.discover-grid {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+
+.discover-card {
+  background-color: #ffffff;
+  border-radius: 0.75rem;
+  padding: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.discover-card h3 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.discover-card figure {
+  margin: 0.25rem 0;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.discover-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.discover-card address {
+  font-style: normal;
+  font-size: 0.9rem;
+  color: #333;
+  white-space: pre-line; 
+}
+
+.discover-card p {
+  font-size: 0.95rem;
+}
+
+.learn-more-btn {
+  align-self: flex-start;
+  margin-top: auto;
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  border: none;
+  background-color: #2563eb;
+  color: #fff;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.learn-more-btn:hover,
+.learn-more-btn:focus-visible {
+  background-color: #1d4ed8;
+}
+
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (max-width: 640px) {
+  .discover-grid {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "card1"
+      "card2"
+      "card3"
+      "card4"
+      "card5"
+      "card6"
+      "card7"
+      "card8";
   }
+}
+
+
+@media (min-width: 641px) and (max-width: 1024px) {
+  .discover-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-areas:
+      "card1 card2"
+      "card3 card4"
+      "card5 card6"
+      "card7 card8";
+  }
+}
+
+
+@media (min-width: 1025px) {
+  .discover-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-areas:
+      "card1 card2 card3 card4"
+      "card5 card6 card7 card8";
+  }
+}
+
+
+.discover-card-1 { grid-area: card1; }
+.discover-card-2 { grid-area: card2; }
+.discover-card-3 { grid-area: card3; }
+.discover-card-4 { grid-area: card4; }
+.discover-card-5 { grid-area: card5; }
+.discover-card-6 { grid-area: card6; }
+.discover-card-7 { grid-area: card7; }
+.discover-card-8 { grid-area: card8; }
+
+@media (min-width: 641px) {
+ 
+  .discover-card img {
+    transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+  }
+
+  
+  .discover-card figure:hover img {
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 10px 18px rgba(0, 0, 0, 0.25);
+    filter: brightness(1.05);
+  }
+}
+.discover-card,
+.discover-card * {
+  opacity: 1 !important;
+  color: #4a4949 !important;
+}
+.discover-intro h1 {
+  margin-bottom: 1rem; 
+}
+.discover-intro p {
+  color: #4e5053; 
+  font-size: 1rem; 
+}
+.discover-intro {
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
