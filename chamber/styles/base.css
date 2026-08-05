@@ -670,6 +670,10 @@ footer {
     margin: 10% auto;
   }
 }
+/* ==========================================================================
+   DISCOVER SECTION
+   ========================================================================== */
+
 .discover-main {
   max-width: 1200px;
   margin: 0 auto;
@@ -678,11 +682,18 @@ footer {
 
 .discover-intro h1 {
   font-size: 2rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem; 
 }
 
 .discover-intro p {
   max-width: 60ch;
+  color: #4e5053; 
+  font-size: 1rem; 
+}
+
+.discover-intro {
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
 }
 
 .visit-message {
@@ -703,33 +714,70 @@ footer {
   color: var(--muted-text, #525151);
 }
 
-
+/* Outer Parent Grid Structure Setup */
 .discover-grid {
   display: grid;
-  gap: 1rem;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
   margin-top: 1.5rem;
 }
 
+@media (min-width: 641px) {
+  .discover-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ==========================================================================
+   DISCOVER CARD INTERNAL GRID ENGINE (NAMED AREAS)
+   ========================================================================== */
 
 .discover-card {
   background-color: #ffffff;
   border-radius: 0.75rem;
-  padding: 1rem;
+  padding: 1.25rem;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
+  opacity: 1 !important;
+  color: #4a4949 !important;
+
+  /* Turn the individual card into a grid */
+  display: grid;
+  gap: 1rem;
+  align-items: start;
 }
 
-.discover-card h3 {
+.discover-card * {
+  opacity: 1 !important;
+  color: #4a4949 !important;
+}
+
+/* Bind Children Elements to Named Area Keys */
+.discover-card h3 { 
+  grid-area: title; 
+  margin: 0; 
+  font-size: 1.2rem; 
+}
+.discover-card figure { 
+  grid-area: media; 
+  margin: 0; 
+  border-radius: 0.5rem; 
+  overflow: hidden; 
+}
+.discover-card p { 
+  grid-area: description; 
+  font-size: 0.95rem; 
   margin: 0;
-  font-size: 1.1rem;
 }
-
-.discover-card figure {
-  margin: 0.25rem 0;
-  border-radius: 0.5rem;
-  overflow: hidden;
+.discover-card address { 
+  grid-area: location; 
+  font-style: normal; 
+  font-size: 0.9rem; 
+  color: #333; 
+  white-space: pre-line; 
+}
+.discover-card .learn-more-btn { 
+  grid-area: action; 
+  width: 100%;
 }
 
 .discover-card img {
@@ -738,21 +786,8 @@ footer {
   height: auto;
 }
 
-.discover-card address {
-  font-style: normal;
-  font-size: 0.9rem;
-  color: #333;
-  white-space: pre-line; 
-}
-
-.discover-card p {
-  font-size: 0.95rem;
-}
-
 .learn-more-btn {
-  align-self: flex-start;
-  margin-top: auto;
-  padding: 0.4rem 0.9rem;
+  padding: 0.6rem 1.2rem;
   border-radius: 999px;
   border: none;
   background-color: #2563eb;
@@ -766,6 +801,64 @@ footer {
   background-color: #1d4ed8;
 }
 
+/* --- Breakpoint 1: Small Screens (320px to 640px) --- */
+@media (min-width: 320px) and (max-width: 640px) {
+  .discover-card {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "title"
+      "media"
+      "description"
+      "location"
+      "action";
+  }
+  
+  .discover-card img {
+    height: 180px;
+    object-fit: cover;
+  }
+}
+
+/* --- Breakpoint 2: Medium Screens (641px to 1024px) --- */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .discover-card {
+    grid-template-columns: 140px 1fr; /* Image acts as a vertical side pillar */
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+      "media title"
+      "media description"
+      "media location"
+      "action action";
+  }
+  
+  .discover-card img {
+    height: 100%;
+    min-height: 130px;
+    object-fit: cover;
+  }
+}
+
+/* --- Breakpoint 3: Large Screens (1025px and above) - Matches Layout Image --- */
+@media (min-width: 1025px) {
+  .discover-card {
+    grid-template-columns: 200px 1fr; /* Asymmetric layout */
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+      "title       title"
+      "media       description"
+      "media       location"
+      "action      action";
+  }
+  
+  .discover-card img {
+    height: 130px;
+    object-fit: cover;
+  }
+}
+
+/* ==========================================================================
+   UTILITIES & DECORATIONS
+   ========================================================================== */
 
 .visually-hidden {
   position: absolute;
@@ -779,79 +872,14 @@ footer {
   border: 0;
 }
 
-@media (max-width: 640px) {
-  .discover-grid {
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      "card1"
-      "card2"
-      "card3"
-      "card4"
-      "card5"
-      "card6"
-      "card7"
-      "card8";
-  }
-}
-
-
-@media (min-width: 641px) and (max-width: 1024px) {
-  .discover-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    grid-template-areas:
-      "card1 card2"
-      "card3 card4"
-      "card5 card6"
-      "card7 card8";
-  }
-}
-
-
-@media (min-width: 1025px) {
-  .discover-grid {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    grid-template-areas:
-      "card1 card2 card3 card4"
-      "card5 card6 card7 card8";
-  }
-}
-
-
-.discover-card-1 { grid-area: card1; }
-.discover-card-2 { grid-area: card2; }
-.discover-card-3 { grid-area: card3; }
-.discover-card-4 { grid-area: card4; }
-.discover-card-5 { grid-area: card5; }
-.discover-card-6 { grid-area: card6; }
-.discover-card-7 { grid-area: card7; }
-.discover-card-8 { grid-area: card8; }
-
 @media (min-width: 641px) {
- 
   .discover-card img {
     transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
   }
-
   
   .discover-card figure:hover img {
     transform: translateY(-4px) scale(1.02);
     box-shadow: 0 10px 18px rgba(0, 0, 0, 0.25);
     filter: brightness(1.05);
   }
-}
-.discover-card,
-.discover-card * {
-  opacity: 1 !important;
-  color: #4a4949 !important;
-}
-.discover-intro h1 {
-  margin-bottom: 1rem; 
-}
-.discover-intro p {
-  color: #4e5053; 
-  font-size: 1rem; 
-}
-.discover-intro {
-  padding-bottom: 1.5rem;
-  border-bottom: 1px solid rgba(255,255,255,0.08);
 }
