@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="SEE the beauty in flowers." />
+  <meta property="og:title" content="Flow-hub" />
+  <meta property="og:description" content="Discover the beauty in the arts of flowers." />
+  <meta property="og:image" content="/image/ic.png" />
+  <link rel="icon" href="image/ic.png" />
+  <script src="scripts/date.js" defer></script>
+  <script src="scripts/navigation.js" defer></script>
+  <script src="scripts/slides.js" defer></script>
+  <link rel="stylesheet" href="styles/index.css" />
+
+  <title>Species | Home</title>
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <img src="images/ic.png" alt="Scripture Study Logo" class="logo">
+      <h1>Flower-Hub</h1>
+      <button class="hamburger" id="menu-toggle">☰</button>
+      <nav id="nav-menu" class="hidden">
+        <a href="index.html">Home</a>
+        <a href="species.html">Species</a>
+        <a href="about.html">About</a>
+        <button class="dark-mode-toggle">🌙</button>
+      </nav>
+    </div>
+  </header>
+  <div class="slider-box">
+    <ul>
+        <li>
+            <img src="image/flo.png" alt="" loading="lazy">
+            <div class="text">
+                <h2> Join us</h2>
+                <button class="hero-button">Visit Now</button>
+            </div>
+        </li>
+        <li>
+            <img src="image/flow.png" alt="flowers">
+            <div class="text">
+                <h2> ART AT ITS PEAK</h2>
+                <button class="hero-button">Visit Now</button>
+            </div>
+        </li>
+    </ul>
+  </div>
+
+  <main>
+    <section id="discover-cards">
+      <p>Loading species...</p>
+    </section>
+  </main>
+  <footer>
+    <p>Flower-hub</p>
+    <p>Tawariowei Oyinpreye </p>
+    <p>Email: flohub@gmail.com | Phone: (224) 5546783954</p>
+    <div class="social-icons">
+      <a href="https://www.facebook.com/"><img src="images/images/social_facebook.webp" alt="Facebook"></a>
+      <a href="https://www.twitter.com/"><img src="images/images/social_twitter.webp" alt="Twitter"></a>
+      <a href="https://www.instagram.com"><img src="images/images/social_instagram.webp" alt="Instagram"></a>
+    </div>
+    <p>WDD 231 Class Project | gawariowei Oyinpreye</p>
+    <p>&copy; <span id="currentyear"></span> 
+    <p id="lastModified"></p>
+  </footer>
+</body>
