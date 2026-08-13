@@ -1,169 +1,80 @@
 <!DOCTYPE html>
-<html lang="en-US">
-
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Tawariowei Oyinpreye">
-    <meta name="description" content=". 
-    Connecting people to quality maintenance ..
-    Home page for Finder website">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="SEE the beauty in flowers." />
+  <meta property="og:title" content="Flow-hub" />
+  <meta property="og:description" content="Discover the beauty in the arts of flowers." />
+  <meta property="og:image" content="/image/ic.png" />
+  <link rel="icon" href="image/ic.png" />
+  <script src="scripts/date.js" defer></script>
+  <script src="scripts/navigation.js" defer></script>
+  <script src="scripts/slides.js" defer></script>
+  <link rel="stylesheet" href="styles/index.css" />
 
-    <meta property="og:title" content="Finder">
-    <meta property="og:description" content="Connecting people to places, events, and the joy of exploration..">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="https://preye45.github.io/wdd231/project/images/home-page.png">
-    <meta property="og:url" content="https://preye45.github.io/wdd231/project/index.html">
-    <meta name="twitter:card" content="the joy of clean environment">
-    <title>Homepage | EMGBAHA</title>
-    <link rel="icon" type="image/png" sizes="16x16" href="images/icons/favicon-16x16.png">
-
-    <link rel="apple-touch-icon" sizes="180x180" href="images/icons/Emgbaha logo.jpg">
-    <link rel="icon" type="image/png" sizes="32x32" href="images/icons/">
-    <link rel="manifest" href="images/icons/site.webmanifest">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
-
-    <link rel="stylesheet" href="styles/normalize.css" media="screen">
-    <link rel="stylesheet" href="styles/index.css" media="screen">
-    <link rel="stylesheet" href="styles/tools.css" media="screen">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-    
-    <script src="scripts/index.js" defer></script>
-    <script src="scripts/nav_foot.js" defer></script>
-    <script type="module" src="scripts/greeting.js"></script>
-
-
+  <title>Scripture Study | Home</title>
 </head>
-
 <body>
-
-    <header>
-        
-        <div class="grtContainer"> </div>
-
-        <div class="nav-container">
-
-            <span class="logo-container">
-                <a href="index.html">
-                    <img src="images/Emgbaha logo.jpg" alt="EMBAGHA logo" loading="lazy">
-                </a>
-                <span id="icon-menu"> </span>
-            </span>
-
-            <nav class="nav-links">
-                <ul>
-                    <li><a href="index.html" class="active">Home</a></li>
-                    <li><a href="tools.html">Tools</a></li>
-                    <li><a href="about.html">About</a></li>
-                </ul>
-            </nav>
-
-        </div>
-
-    </header>
-
-    <main>
-
-        <section id="hero-container">
-
-            <div class="pic-src">
-                <picture>
-                    <source srcset="images/flower 4.jpg" media="(min-width: 1000px)">
-                    <img src="images/flower 4.jpg" alt="Hero image" width="463" height="618" loading="lazy">
-                </picture>
-
-
-                <div class="hero-msg">
-                    <h1>Quality maintenance at your service 
-                        <br> Top knotch tools guaranteed
-                    </h1>
-        
-                  <a href="about.html">Join us</a>
-                </div>
-
+  <header>
+    <div class="header-container">
+      <img src="image/ic.png" alt=" Logo" class="logo">
+      <h1>Flower-Hub</h1>
+      <button class="hamburger" id="menu-toggle">☰</button>
+      <nav id="nav-menu" class="hidden">
+        <a href="index.html">Home</a>
+        <a href="species.html">Species</a>
+        <a href="about.html">About</a>
+        <button class="dark-mode-toggle">🌙</button>
+      </nav>
+    </div>
+  </header>
+  <div class="slider-box">
+    <ul>
+        <li>
+            <img src="image/flo.png" alt="" loading="lazy">
+            <div class="text">
+                <h2> Join us</h2>
+                <button class="hero-button">Visit Now</button>
             </div>
-
-
-        </section> 
-        <section class="all-events"> 
-            <section class="all-events"> 
-    <h2>Existing Tools</h2>
-    <!-- The JavaScript will "inject" the 15 items here -->
-    <div id="tools-container" class="tools-grid"></div>
-</section>
-
-<!-- Modal for Tool Details (Required for your project) -->
-<dialog id="tool-details">
-    <div id="modal-content"></div>
-    <button id="close-modal">Close</button>
-</dialog>
-
- 
-
-            </a>
-
-        </section>
-
-        <dialog class="moreInfoWrapper"> </dialog>
-
-
-        
-
-    </main>
-
-
-    <footer>
-        <div class="footer-background">
-
-            <div class="footer-section">
-                
-                <ul class="sec-one">
-                    <li>WDD231 Web Development 1 Project</li>
-                    <li>Brigham Young University - Idaho</li>
-                    <li>Tawariowei Oyinpreye</li>
-                    <li id="lastModified"></li>
-                    <li> <a href="attribution.html">Attribution</a> </li>
-                </ul>
-                
-                <ul class="sec-two">
-                    <li>EMGBAHA</li>
-                    <li><a href="about.html">About</a></li>
-                    <li>Podcast</li>
-                    <li>FAQs</li>
-                    <li>Local Guide</li>
-                </ul>
-                
-                
-                <ul class="sec-three">
-                    <li> Connect with us</li>
-                    <li> <i class="fa-brands fa-instagram"></i> Instagram</li>
-                    <li> <i class="fa-brands fa-facebook"></i> Facebook</li>
-                    <li> <i class="fa-brands fa-twitter"></i> Twitter</li>
-                    <li> <i class="fa-brands fa-linkedin"></i> LinkedIn</li>
-                </ul>
-                
+        </li>
+        <li>
+            <img src="images/images/flo.png" alt="flowers">
+            <div class="text">
+                <h2> ART AT ITS PEAK</h2>
+                <button class="hero-button">Visit Now</button>
             </div>
+        </li>
+    </ul>
+  </div>
+  
 
-            <div class="footend-section">
-                <hr>
-                
-                <ul>
-                    <li>©<span id="currentYear"></span> EMGBAHA | All rights reserved</li>
-                    <li>Designed by Tawariowei Oyinpreye</li>
-                </ul>
+  <main>
+    <section>
+      <h2>Welcome</h2>
+      <p>Join us and discover the beauty all around us.</p>
+    </section>
+    <section>
+      <h2>Specie of the day</h2>
+      <div id="specie">Loading...</div>
+    </section>
+    <section>
+      <h2>Explore species</h2>
+      <ul id="specie-list"></ul>
+    </section>
+  </main>
 
-            </div>
-
-        </div>
-
-
-    </footer>
-
+  <footer>
+    <p>Flower-hub</p>
+    <p>Tawariowei Oyinpreye </p>
+    <p>Email: flohub@gmail.com | Phone: (224) 5546783954</p>
+    <div class="social-icons">
+      <a href="https://www.facebook.com/"><img src="images/images/social_facebook.webp" alt="Facebook"></a>
+      <a href="https://www.twitter.com/"><img src="images/images/social_twitter.webp" alt="Twitter"></a>
+      <a href="https://www.instagram.com"><img src="images/images/social_instagram.webp" alt="Instagram"></a>
+    </div>
+    <p>WDD 231 Class Project | gawariowei Oyinpreye</p>
+    <p>&copy; <span id="currentyear"></span> 
+    <p id="lastModified"></p>
+  </footer>
 </body>
-
-</html>
