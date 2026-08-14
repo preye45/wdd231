@@ -1,0 +1,125 @@
+[
+    {
+     
+        "name": "Rose",
+        "title": "Rosa",
+        "description": "Love, passion, and desire",
+        "image": "image/rose.png",
+        "phone": "+234 803 123 4567",
+        "ArtCultureRepresentation": "Often used in contemporary digital art and photography to explore themes of beauty, decay, and the juxtaposition of romance and mortality."
+      },
+      {
+        "name": "Lily",
+        "title": "Lilium",
+        "description": "Purity, rebirth, and transience",
+        "image": "image/lily.png",
+        "phone": "+234 803 123 4567",
+        "ArtCultureRepresentation": "Featured in modern minimalist and surrealistic art to represent ethereal beauty and the fleeting nature of life, often contrasted with dark, moody backgrounds."
+      },
+      {
+        "name": "Sunflower",
+        "title": "Helianthus annuus",
+        "description": "Loyalty, adoration, and vitality",
+        "image": "image/sun.png",
+        "phone": "+234 803 123 4567",
+        "ArtCultureRepresentation": "A symbol of eco-art and climate change awareness, frequently used in large-scale installations to represent solar energy, optimism, and the Anthropocene era."
+      },
+      {
+        "name": "Lotus",
+        "title": "Nelumbo nucifera",
+        "description": "Spiritual awakening, resilience, and purity",
+        "image": "image/lotus.png",
+        "phone": "+234 803 123 4567",
+        "ArtCultureRepresentation": "Heavily utilized in modern wellness art and neo-traditional tattooing, symbolizing the overcoming of struggle and the rise above digital noise."
+      },
+      {
+        "name": "Orchid",
+        "title": "Orchidaceae",
+        "description": "Luxury, strength, and exotic beauty",
+        "image": "image/orchids.png",
+        "phone": "+234 803 123 4567",
+        "ArtCultureRepresentation": "Represents the intersection of nature and technology in bio-art, often used in macro photography to highlight alien-like, synthetic aesthetics."
+      },
+      {
+        "name": "Cherry Blossom",
+        "Title": "Prunus serrulata",
+        "description": "Impermanence, fleeting beauty, and mindfulness",
+        "image": "image/cherry.png",
+        "phone": "+234 803 123 4567",
+        "ArtCultureRepresentation": "Dominates contemporary anime, manga, and digital illustration as a visual shorthand for melancholic beauty, nostalgia, and the passage of time."
+      },
+      {
+        "name": "Tulip",
+        "title": "Tulipa",
+        "description": "Perfect love, deep forgiveness, and elegance",
+        "image": "image/tulip.png",
+        "phone": "+234 803 123 4567",
+        "ArtCultureRepresentation": "Used in pop art and modern still-life to critique consumerism, referencing the historical 'Tulip Mania' as a metaphor for modern cryptocurrency and economic bubbles."
+      },
+      {
+        "name": "Dandelion",
+        "title": "Taraxacum",
+        "description": "Wishes, survival, and letting go",
+        "image": "image/dande.png",
+        "phone": "+234 803 123 4567",
+        "ArtCultureRepresentation": "A popular motif in street art and contemporary illustration representing resilience, anti-establishment themes, and the organic dispersal of ideas."
+      },
+      {
+        "name": "Poppy",
+        "title": "Papaver",
+        "description": "Remembrance, sleep, and peace",
+        "image": "image/poppy.png",
+        "phone": "+234 803 123 4567",
+        "ArtCultureRepresentation": "Evokes powerful anti-war sentiments in modern protest art and muralism, transforming from a traditional symbol of death to one of peace, healing, and trauma awareness."
+      },
+      {
+        "name": "Hydrangea",
+        "title": "Hydrangea macrophylla",
+        "description": "Gratitude, deep understanding, and vanity",
+        "image": "image/hydra.png",
+        "phone": "+234 803 123 4567",
+        "ArtCultureRepresentation": "Frequently used in fashion design and textile art for its voluminous, cloud-like forms, representing emotional depth and shifting perspectives in identity art."
+      },
+      {
+        "name": "Iris",
+        "title": "Iris",
+        "description": "Wisdom, hope, courage, and faith",
+        "image": "image/iris.png",
+        "phone": "+234 803 123 4567",
+        "ArtCultureRepresentation": "Appears in Art Deco revivals and geometric abstract art, valued for its sharp, structural lines that bridge the gap between natural organic forms and architectural design."
+      },
+      {
+        "name": "Dahlia",
+        "title": "Dahlia",
+        "description": "Commitment, elegance, and inner strength",
+        "image": "image/dha.png",
+        "phone": "+234 803 123 4567",
+        "ArtCultureRepresentation": "Celebrated in modern maximalist art and pattern design for its complex, fractal-like geometry, symbolizing diversity, neurodivergence, and layered identities."
+      },
+      {
+        "name": "Marigold",
+        "title": "Tagetes",
+        "description": "Passion, creativity, and sacredness",
+        "image": "image/mari.png",
+        "phone": "+234 803 123 4567",
+        "artCultureRepresentation": "Central to contemporary Día de los Muertos art and public murals, representing the vibrant, decaying threshold between the living and the dead."
+      },
+      {
+        "name": "Peony",
+        "title": "Paeonia",
+        "description": "Prosperity, romance, and bashfulness",
+        "image": "image/peon.png",
+        "phone": "+234 803 123 4567",
+        "ArtCultureRepresentation": "Used in contemporary romanticism and luxury branding art, often rendered in thick impasto techniques to convey opulence, abundance, and tactile richness."
+      },
+      {
+        "name": "Chrysanthemum",
+        "title": "Chrysanthemum",
+        "description": "Loyalty, honesty, and death",
+        "image": "image/crys.png",
+        "phone": "+234 803 123 4567",
+        "ArtCultureRepresentation": "Featured heavily in dark academia and gothic-inspired contemporary art, representing the duality of life and death, and the beauty found in autumnal decay."
+      }
+ ]
+
+    
