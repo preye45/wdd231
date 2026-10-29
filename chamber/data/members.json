@@ -6,7 +6,7 @@
         "website": "https://sparkletech.ng",
         "image": "d.jpg",
         "membershipLevel": 3,
-        "otherInfo": "Leading AI and cloud infrastructure providers in West Africa."
+        "description": "Leading AI and cloud infrastructure providers in West Africa."
       },
       {
         "name": "Green Garden Bistro",
@@ -15,7 +15,7 @@
         "website": "https://greengardenbistro.com",
         "image": "g.jpg",
         "membershipLevel": 2,
-        "otherInfo": "Organic farm-to-table dining experience in the heart of Wuse."
+        "description": "Organic farm-to-table dining experience in the heart of Wuse."
       },
       {
         "name": "Skyline Architecture",
@@ -24,7 +24,7 @@
         "website": "https://skyline-arch.ng",
         "image": "j.jpg",
         "membershipLevel": 3,
-        "otherInfo": "Sustainable urban planning and luxury residential design."
+        "description": "Sustainable urban planning and luxury residential design."
       },
       {
         "name": "The Daily Grind Cafe",
@@ -33,7 +33,7 @@
         "website": "https://dailygrind.coffee",
         "image": "c.jpg",
         "membershipLevel": 1,
-        "otherInfo": "Freshly roasted Nigerian coffee beans and local pastries."
+        "description": "Freshly roasted Nigerian coffee beans and local pastries."
       },
       {
         "name": "Peak Performance Gym",
@@ -42,7 +42,7 @@
         "website": "https://peakfitness.ng",
         "image": "p.jpg",
         "membershipLevel": 2,
-        "otherInfo": "State-of-the-art equipment with Olympic-sized swimming pool."
+        "description": "State-of-the-art equipment with Olympic-sized swimming pool."
       },
       {
         "name": "Swift Logistics & Co.",
@@ -51,7 +51,7 @@
         "website": "https://swiftlogistics.ng",
         "image": "s.jpg",
         "membershipLevel": 3,
-        "otherInfo": "Fast-track delivery services across the FCT and beyond."
+        "description": "Fast-track delivery services across the FCT and beyond."
       },
       {
         "name": "Blue Ribbon Law Firm",
@@ -60,7 +60,7 @@
         "website": "https://blueribbonlaw.ng",
         "image": "l.jpg",
         "membershipLevel": 1,
-        "otherInfo": "Corporate law experts specializing in startup compliance."
+        "description": "Corporate law experts specializing in startup compliance."
       }
     
   ]
